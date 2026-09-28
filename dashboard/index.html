@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITIS Infrastructure Terminal</title>
+<meta name="description" content="India Transport Infrastructure Intelligence System — geospatial, evidence-linked view of road, expressway, bridge and tunnel projects (sample data).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app" id="app">
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">◈</span><span class="brand-name">ITIS</span><span class="brand-sub">India Transport Infrastructure Intelligence</span></div>
+    <div class="search-wrap">
+      <input id="search" type="search" placeholder="Search project, contractor, JV, authority, state, corridor, highway, tender…  ( / )" autocomplete="off" aria-label="Global search">
+      <div id="search-results" class="search-results" hidden></div>
+    </div>
+    <div class="top-actions">
+      <span class="sample-flag" title="Sample dataset: real projects, source-linked, not a complete database">SAMPLE DATA · as of <span id="asof"></span></span>
+      <button id="theme-toggle" class="btn ghost" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <!-- ============ FILTER STRIP ============ -->
+  <div class="filterbar" id="filterbar">
+    <label>State<select id="f-state"></select></label>
+    <label>Type<select id="f-type"></select></label>
+    <label>Status<select id="f-status"></select></label>
+    <label>Authority<select id="f-authority"></select></label>
+    <label>Company<select id="f-company"></select></label>
+    <label>Value ≥ ₹cr<select id="f-value"><option value="0">Any</option><option value="1000">1,000</option><option value="5000">5,000</option><option value="10000">10,000</option><option value="50000">50,000</option></select></label>
+    <div class="chips" id="active-chips"></div>
+    <button class="btn ghost" id="clear-filters">Clear</button>
+  </div>
+
+  <!-- ============ KPI BAR ============ -->
+  <section class="kpis" id="kpis" aria-label="Key indicators"></section>
+
+  <div class="body">
+    <!-- ============ NAV RAIL ============ -->
+    <nav class="rail" id="rail" aria-label="Views">
+      <button data-view="map" class="active"><b>A·B</b>Map &amp; Executive</button>
+      <button data-view="states"><b>C</b>State Explorer</button>
+      <button data-view="corridors"><b>D</b>Corridor Explorer</button>
+      <button data-view="projects"><b>E</b>Project Explorer</button>
+      <button data-view="contractors"><b>F</b>Contractor Intel</button>
+      <button data-view="authorities"><b>G</b>Authority Intel</button>
+      <button data-view="tenders"><b>H</b>Tender Intel</button>
+      <button data-view="radar"><b>I</b>Opportunity Radar</button>
+      <button data-view="graph"><b>J</b>Relationship Graph</button>
+      <button data-view="timeline"><b>K</b>Project Timeline</button>
+      <button data-view="quality"><b>L</b>Data Quality</button>
+      <button data-view="sources"><b>M</b>Evidence Explorer</button>
+    </nav>
+
+    <main class="main" id="main">
+      <!-- A/B MAP + EXECUTIVE -->
+      <section class="view active" id="view-map">
+        <div class="map-layout">
+          <div class="panel map-panel">
+            <div class="panel-head"><h2>National project map</h2><span class="hint">Scroll to zoom · drag to pan · click a state or project</span>
+              <div class="map-tools"><button class="btn ghost" id="zoom-in" aria-label="Zoom in">+</button><button class="btn ghost" id="zoom-out" aria-label="Zoom out">−</button><button class="btn ghost" id="zoom-reset">Reset</button></div>
+            </div>
+            <div class="map-wrap"><svg id="map" role="img" aria-label="Map of India with project locations"></svg><div id="map-tip" class="tip" hidden></div></div>
+            <div class="legend" id="legend"></div>
+            <p class="footnote">Project geometry is <b>schematic</b>: vertices are approximate centres of the towns each project is reported to connect — not surveyed alignments. Basemap: DataMeet India (CC BY 4.0), simplified; pre-2019 J&amp;K/Ladakh unit. Production requires Survey of India–compliant boundaries.</p>
+          </div>
+          <div class="side-stack">
+            <div class="panel"><div class="panel-head"><h2>Lifecycle pipeline</h2><span class="hint">Projects · ₹cr · km per stage</span></div><div id="pipeline"></div></div>
+            <div class="panel"><div class="panel-head"><h2>Latest dated events</h2></div><div id="feed" class="feed"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-states"><div class="panel"><div class="panel-head"><h2>State explorer</h2><span class="hint">Click a state to filter every view</span></div><div id="states-table"></div></div><div id="state-detail"></div></section>
+      <section class="view" id="view-corridors"><div class="panel"><div class="panel-head"><h2>Corridor explorer</h2><span class="hint">Corridor → packages → contractors</span></div><div id="corridors"></div></div></section>
+      <section class="view" id="view-projects"><div class="panel"><div class="panel-head"><h2>Project explorer</h2><span class="hint" id="proj-count"></span><div class="map-tools"><button class="btn" id="export-csv">Export CSV</button><button class="btn ghost" id="export-json">Export JSON</button></div></div><div id="projects-table"></div></div></section>
+      <section class="view" id="view-contractors"><div class="panel"><div class="panel-head"><h2>Contractor intelligence</h2><span class="hint">Factual counts from ingested packages — not a quality ranking</span>
+        <label class="inline">Sort by<select id="c-sort"><option value="value">Award value (₹cr, sum of package values attributed)</option><option value="projects">Number of projects</option><option value="km">Package length (km)</option><option value="active">Active (under construction) packages</option></select></label></div>
+        <div id="contractors"></div></div></section>
+      <section class="view" id="view-authorities"><div class="panel"><div class="panel-head"><h2>Authority intelligence</h2><span class="hint">Authority → projects → value → km → contractors → states</span></div><div id="authorities"></div></div></section>
+      <section class="view" id="view-tenders"><div class="panel"><div class="panel-head"><h2>Tender &amp; contract intelligence</h2><span class="hint">Package-level procurement records (sample)</span></div><div id="tenders-chart"></div><div id="tenders"></div></div></section>
+      <section class="view" id="view-radar"><div class="panel"><div class="panel-head"><h2>Infrastructure opportunity radar</h2><span class="hint">Evidence-backed signals only · no unsupported predictions</span></div><div id="radar"></div></div></section>
+      <section class="view" id="view-graph"><div class="graph-layout"><div class="panel"><div class="panel-head"><h2>Relationship graph</h2><span class="hint">Authority → Project → Contractor / JV partner · click a node</span></div><svg id="graph" role="img" aria-label="Relationship graph"></svg><div class="legend" id="graph-legend"></div></div><div class="panel" id="graph-side"><p class="muted">Select a node to see its relationships.</p></div></div></section>
+      <section class="view" id="view-timeline"><div class="panel"><div class="panel-head"><h2>Project timeline</h2><span class="hint">Status history is append-only — earlier statuses are preserved</span></div><div id="timeline"></div></div></section>
+      <section class="view" id="view-quality"><div class="panel"><div class="panel-head"><h2>Data quality centre</h2><span class="hint">Data-confidence score — not a project-quality score</span></div><div id="quality"></div></div></section>
+      <section class="view" id="view-sources"><div class="panel"><div class="panel-head"><h2>Source / evidence explorer</h2><span class="hint" id="src-count"></span></div><div id="sources"></div></div></section>
+    </main>
+  </div>
+</div>
+
+<!-- ============ PROJECT DETAIL DRAWER ============ -->
+<aside class="drawer" id="drawer" hidden aria-label="Project detail">
+  <div class="drawer-head">
+    <div><div class="eyebrow" id="d-id"></div><h2 id="d-title"></h2></div>
+    <div class="drawer-actions"><button class="btn ghost" id="d-print">Briefing (PDF)</button><button class="btn ghost" id="d-close" aria-label="Close">✕</button></div>
+  </div>
+  <div class="drawer-body" id="d-body"></div>
+</aside>
+
+<script src="data/india-states.js"></script>
+<script src="data/sample-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
