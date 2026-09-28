@@ -27,7 +27,8 @@
 | Delayed | `--st-delayed` | ✕ | `8 3 2 3` | Delayed |
 | Stalled / Disputed | `--st-stalled` | ‖ | `2 3` | Stalled, Disputed |
 | Completed / Operational | `--st-complete` | ● | solid | Substantially completed, Completed, Operational, Open to traffic |
-| Cancelled / Terminated | `--st-cancelled` | ⊘ | `1 4` | Cancelled, Terminated, Unknown |
+| Cancelled / Terminated | `--st-cancelled` | ⊘ | `1 4` | Cancelled, Terminated |
+| Status unverified | `--text-3` | ? | `1 6` | Unknown / status requires verification |
 
 Groups are *display buckets only*; the record always shows its exact status label.
 

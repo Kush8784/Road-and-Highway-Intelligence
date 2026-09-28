@@ -58,3 +58,56 @@ Each gap is listed in `docs/PROJECT_TRACKER.md › Open verification items`.
 - Delhi–Amritsar–Katra July-2026 openings are from a Tier-4 source; status as-of uses the Business Today report (8 Sep 2026).
 - Mumbai Coastal Road 24×7 operation from 15 Aug 2025 is from a secondary summary; treat as REPORTED.
 - Sela Tunnel contractor (Patel Engineering) was found via discovery sources; pin to a BRO/company document before VERIFIED.
+
+---
+
+## Contractor portfolio ingest (v0.2, 2026-09-28)
+
+Each of the 19 companies in the original sample was searched for its India road, bridge, tunnel and expressway track record. **Every project found was ingested with its own source:** 45 new projects, 80 new sources (S050–S129) and 16 more companies (co-contractors on the same corridors, JV partners and subsidiaries). Packages were also added to corridors that were already in the sample:
+- Samruddhi: 13 of 16 package contractors
+- Delhi–Mumbai: L&T Pkgs 11 & 22; RSIIL Vadodara–Virar Pkgs 8–10 (two since terminated and re-tendered); APCO's Jewar link (L1); GR Infra's Bandikui–Jaipur spur
+- Delhi–Amritsar–Katra: APCO Pkg 17 (L1)
+
+File: `dashboard/data/portfolio-data.js`, loaded after `sample-data.js`. Each new record carries `ingest: "contractor-portfolio"` and is tagged **portfolio** in the UI.
+
+Totals now: **61 projects · 128 sources · 35 companies · 107 packages · 102 contracts · 110 contract parties · 2 L1 bids** (seed load-tested).
+
+### Projects per original company (company or its own entity; group subsidiaries listed separately)
+
+| Company | Projects | Projects found |
+|---|---|---|
+| Larsen & Toubro Limited | 10 | Delhi–Mumbai Expressway; Mumbai–Nagpur Expressway; Mumbai Trans Harbour Link; Mumbai Coastal Road; Dwarka Expressway; Atal Setu; Nivedita Setu; Second Ishwar Gupta Setu; Kacchi Dargah–Bidupur Ganga Bridge; Agra–Lucknow Expressway |
+| IHI Corporation | 1 | Mumbai Trans Harbour Link |
+| Daewoo Engineering & Construction | 2 | Mumbai Trans Harbour Link; Kacchi Dargah–Bidupur Ganga Bridge |
+| Tata Projects Limited | 2 | Mumbai Trans Harbour Link; Chennai Peripheral Ring Road — Phase 1 |
+| Megha Engineering & Infrastructures Ltd | 4 | Mumbai–Nagpur Expressway; Zojila Tunnel; Thane–Borivali Twin Tube Road Tunnel; Pune Outer Ring Road |
+| Hindustan Construction Company Ltd | 3 | Mumbai Coastal Road; Bandra–Worli Sea Link; Mumbai–Pune Expressway |
+| Hyundai Development Company | 1 | Mumbai Coastal Road |
+| IRB Infrastructure Developers Ltd | 8 | Ganga Expressway; Mumbai–Pune Expressway; Hyderabad Outer Ring Road; Surat–Dahisar; Jaipur–Deoli; Talegaon–Amravati; Pathankot–Amritsar; Ahmedabad–Vadodara |
+| Adani Enterprises Ltd | 1 | Ganga Expressway |
+| Patel Engineering Ltd | 4 | Sela Tunnel; East–West Corridor; Surat–Manor Tollway; Varanasi–Shaktinagar Road four-laning |
+| J. Kumar Infraprojects Ltd | 3 | Dwarka Expressway; Thane Elevated Road; Eastern Freeway — Panjarpole to Chembur–Mankhurd Link Road section |
+| APCO Infratech Pvt Ltd | 8 | Delhi–Mumbai Expressway; Mumbai–Nagpur Expressway; Z-Morh; Delhi–Amritsar–Katra Expressway; Versova–Bandra Sea Link; Purvanchal Expressway; Bundelkhand Expressway; Gorakhpur Link Expressway |
+| Navayuga Engineering Company Ltd | 4 | Pune Outer Ring Road; Dhola–Sadiya Bridge; Silkyara Bend–Barkot Tunnel; Banihal–Qazigund Road Tunnel |
+| G R Infraprojects Ltd | 6 | Delhi–Mumbai Expressway; Pune Outer Ring Road; Purvanchal Expressway; Bhimasar–Anjar–Bhuj; Agra–Gwalior Greenfield Expressway; NH-56 four-laning, Gujarat |
+| PNC Infratech Ltd | 4 | Mumbai–Nagpur Expressway; Agra–Lucknow Expressway; Purvanchal Expressway; Awadh Expressway |
+| Roadway Solutions India Infra Ltd | 1 | Delhi–Mumbai Expressway |
+| STRABAG | 1 | Atal Tunnel |
+| Afcons Infrastructure Ltd | 4 | Mumbai–Nagpur Expressway; Atal Tunnel; Agra–Lucknow Expressway; Jammu–Udhampur four-laning |
+| IL&FS (infrastructure arm) | 1 | Chenani–Nashri Tunnel |
+
+Group entities: **L&T IDPL** (L&T subsidiary) holds 10 BOT concessions, and **Adani Road Transport** (Adani Enterprises subsidiary) holds 3 HAM projects. The portfolio panel rolls these up when "include subsidiaries" is ticked. Parents and subsidiaries are linked, never merged.
+
+### How to read "lifetime"
+- It covers what the research pass found, and it is **not a company's full order book**. Published lifetime totals are shown separately and labelled as the company's own statement. Examples: HCC "3,800+ lane-km, 364 km tunnelling, 383 major bridges"; MEIL "8,821 lane-km"; IRB "28 projects, ~12,800 lane-km"; ARTL "20 projects, 5,500+ lane-km".
+- Rail and metro work (e.g. the Chenab rail bridge, the Kolkata underwater metro, IHI's freight-corridor steel bridges) is **excluded** as out of scope.
+- An **L1 declaration** is stored as a bid (`tender_bids`), not a contract, until an award is sourced.
+- Where only an old award is sourced, the status is kept as the old evidence shows, or set to *Unknown / status requires verification*. Examples: IRB's 2009 wins (Surat–Dahisar, Jaipur–Deoli, Talegaon–Amravati) and Adani's 2019–21 LoAs. Old statuses are never presented as current, and they show as stale in the Data Quality Centre.
+- Authority is recorded only when a source names it. UPEIDA was confirmed from its own pages (S127–S129). L&T IDPL concessions other than Krishnagiri–Walajahpet have no authority recorded.
+
+### Research method and limits
+The build environment's network policy blocked direct fetching of company websites, Wikipedia and most authority portals. Facts were therefore taken from search-engine result extracts that cite each page's URL, and they are marked `REPORTED` unless two independent publishers agree. Before any value is treated as `VERIFIED`, the claim should be re-checked against the linked page (agent spec 05, stage 2).
+
+Constraints caught during this ingest:
+- a "documented" technology requirement without a source was rejected by the database; it now has one;
+- a package whose role text contained "L1" was being misfiled as a bid; the role text and the matching rule were both fixed.

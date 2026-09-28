@@ -427,7 +427,7 @@ window.ITIS_DATA = {
       dates: { planned_completion: "2028 (mid)", revised_completion: null, actual_completion: null },
       packages_summary: { count: 2, ingested: 2, note: "" },
       packages: [
-        { no: "Pkg 1", name: "Twin tunnel package 1", length_km: null, value_cr: 7464, award_date: null, status: "UNDER_CONSTRUCTION", contractor: { kind: "Single", members: [{ company: "C-MEIL", share: 100, role: "EPC contractor (L1 bidder)" }] }, source: "S028", confidence: "CROSS_VERIFIED" },
+        { no: "Pkg 1", name: "Twin tunnel package 1", length_km: null, value_cr: 7464, award_date: null, status: "UNDER_CONSTRUCTION", contractor: { kind: "Single", members: [{ company: "C-MEIL", share: 100, role: "EPC contractor" }] }, source: "S028", confidence: "CROSS_VERIFIED" },
         { no: "Pkg 2", name: "Twin tunnel package 2", length_km: null, value_cr: 6937, award_date: null, status: "UNDER_CONSTRUCTION", contractor: { kind: "Single", members: [{ company: "C-MEIL", share: 100, role: "EPC contractor" }] }, source: "S028", confidence: "CROSS_VERIFIED" },
       ],
       events: [

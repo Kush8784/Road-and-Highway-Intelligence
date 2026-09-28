@@ -2,7 +2,7 @@
 
 Status legend: ✅ done · 🟡 in progress · ⬜ not started · ⛔ blocked
 
-_Last updated: 2026-09-28_
+_Last updated: 2026-09-28 (v0.2 — contractor portfolios)_
 
 ## Phase 0 — Specification & prototype (this delivery)
 
@@ -15,6 +15,7 @@ _Last updated: 2026-09-28_
 | 0.5 | Seed generator + seed SQL | ✅ | `tools/build-seed.js` → `db/seed_sample.sql` |
 | 0.6 | Prototype dashboard, views A–M + project drawer | ✅ | `dashboard/index.html`; offline, no deps |
 | 0.7 | Basemap build script | ✅ | `tools/build-basemap.js` (DataMeet, CC BY 4.0) |
+| 0.8 | Contractor lifetime portfolio ingest (19 companies → 45 projects, 80 sources) | ✅ | `dashboard/data/portfolio-data.js`; Contractor Intel › company portfolio panel |
 
 ## Phase 1 — Foundation (weeks 1–6)
 
@@ -52,6 +53,12 @@ _Last updated: 2026-09-28_
 
 | Project | Item |
 |---|---|
+| All portfolio records | Re-check each search-derived claim against its linked page (direct fetch blocked during research) |
+| IRB 2009 BOTs, Adani 2019–21 HAM LoAs | Current status (kept as unknown / old status, flagged stale) |
+| Samruddhi Pkgs 14–16; Purvanchal/Bundelkhand package values | Contractors and contract values |
+| Kacchi Dargah–Bidupur | Year of the 23 June Patna–Raghopur opening |
+| Awadh Expressway | Primary confirmation of 13 Jul 2026 opening (tier-4 source) |
+| Agra–Gwalior (GR Infra) | Primary confirmation of Apr-2025 award (tier-4 source) |
 | Delhi–Mumbai Expressway | Map 54 packages → contractors; primary source for ₹96,547 cr sanctioned cost |
 | Zojila Tunnel | Primary (NHIDCL/PIB) confirmation of 9 Jun 2026 breakthrough; award value |
 | Mumbai Coastal Road | Resolve Package 2 vs "2 and 3" attribution to HCC–HDC JV; primary BMC cost |

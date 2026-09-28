@@ -42,4 +42,4 @@ Never invent data, contractors, values, status or coordinates · attach a source
 
 ## Current state
 
-A working prototype dashboard (`dashboard/`) over a **sample dataset of 16 real projects and 48 cited sources** (researched 2026-09-28), the complete relational schema with a seed generated from the same data, and the full build specification (`docs/spec/`). See `docs/PROJECT_TRACKER.md`.
+A working prototype dashboard (`dashboard/`) over a **sample dataset of 61 real projects, 128 cited sources and 35 companies** (researched 2026-09-28), including each contractor's researched lifetime portfolio, the complete relational schema with a seed generated from the same data, and the full build specification (`docs/spec/`). See `docs/PROJECT_TRACKER.md`.

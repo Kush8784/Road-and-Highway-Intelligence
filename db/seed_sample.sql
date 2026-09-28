@@ -47,7 +47,13 @@ INSERT INTO states (state_code, name, kind) VALUES
   ('IN-AR', 'Arunachal Pradesh', 'State'),
   ('IN-HP', 'Himachal Pradesh', 'State'),
   ('IN-PB', 'Punjab', 'State'),
-  ('IN-GA', 'Goa', 'State');
+  ('IN-GA', 'Goa', 'State'),
+  ('IN-WB', 'West Bengal', 'State'),
+  ('IN-BR', 'Bihar', 'State'),
+  ('IN-TG', 'Telangana', 'State'),
+  ('IN-AS', 'Assam', 'State'),
+  ('IN-UK', 'Uttarakhand', 'State'),
+  ('IN-OD', 'Odisha', 'State');
 INSERT INTO sources (source_id, url, url_normalised, title, publisher, source_type, tier, pub_date, pub_date_precision, access_date) VALUES
   ('S001', 'https://en.wikipedia.org/wiki/Delhi%E2%80%93Mumbai_Expressway', 'https://en.wikipedia.org/wiki/delhi%e2%80%93mumbai_expressway', 'Delhi–Mumbai Expressway', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
   ('S002', 'https://swarajyamag.com/infrastructure/delhimumbai-expressway-largely-on-track-for-2026-completion-but-three-gujarat-packages-lag-behind-wont-be-ready-until-march-2028', 'https://swarajyamag.com/infrastructure/delhimumbai-expressway-largely-on-track-for-2026-completion-but-three-gujarat-packages-lag-behind-wont-be-ready-until-march-2028', 'Delhi–Mumbai Expressway largely on track for 2026 completion, but three Gujarat packages lag behind, won''t be ready until March 2028', 'Swarajya', 'News', 3, NULL, 'unknown', '2026-09-28'),
@@ -96,7 +102,87 @@ INSERT INTO sources (source_id, url, url_normalised, title, publisher, source_ty
   ('S045', 'https://www.globalhighways.com/wh10/news/sela-tunnel-india-inaugurated', 'https://www.globalhighways.com/wh10/news/sela-tunnel-india-inaugurated', 'Sela Tunnel in India inaugurated', 'Global Highways', 'Trade publication', 3, '2024-03-01', 'month', '2026-09-28'),
   ('S046', 'https://www.newsonair.gov.in/pm-modi-inaugurates-%E2%82%B911000-crore-highway-projects-in-delhi', 'https://www.newsonair.gov.in/pm-modi-inaugurates-%e2%82%b911000-crore-highway-projects-in-delhi', 'PM Modi inaugurates ₹11,000 crore highway projects in Delhi', 'News On AIR (Prasar Bharati)', 'Public broadcaster', 1, '2025-08-17', 'day', '2026-09-28'),
   ('S047', 'https://www.punekarnews.in/msrdc-faces-delay-in-third-party-scrutiny-report-for-pune-ring-road-tenders/', 'https://www.punekarnews.in/msrdc-faces-delay-in-third-party-scrutiny-report-for-pune-ring-road-tenders', 'MSRDC faces delay in third-party scrutiny report for Pune Ring Road tenders', 'Punekar News', 'News', 3, NULL, 'unknown', '2026-09-28'),
-  ('S049', 'https://www.blackridgeresearch.com/project-profiles/dwarka-expressway-highway-cost-route-location-completion-date-inauguration/', 'https://www.blackridgeresearch.com/project-profiles/dwarka-expressway-highway-cost-route-location-completion-date-inauguration', 'Dwarka Expressway: route, location, cost & completion date', 'Blackridge Research', 'Specialist portal', 4, NULL, 'unknown', '2026-09-28');
+  ('S049', 'https://www.blackridgeresearch.com/project-profiles/dwarka-expressway-highway-cost-route-location-completion-date-inauguration/', 'https://www.blackridgeresearch.com/project-profiles/dwarka-expressway-highway-cost-route-location-completion-date-inauguration', 'Dwarka Expressway: route, location, cost & completion date', 'Blackridge Research', 'Specialist portal', 4, NULL, 'unknown', '2026-09-28'),
+  ('S050', 'https://www.icra.in/Rating/ShowRationalReportFilePdf/35482', 'https://www.icra.in/rating/showrationalreportfilepdf/35482', 'L&T Infrastructure Development Projects Ltd — rating rationale', 'ICRA', 'Credit rating rationale', 3, '2017-01-11', 'day', '2026-09-28'),
+  ('S051', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/vadodara-bharuch-gujarat/', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/vadodara-bharuch-gujarat', 'Vadodara–Bharuch (Gujarat) — operational projects', 'L&T IDPL', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S052', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/rajkot-jamnagar-vadinar-gujarat/', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/rajkot-jamnagar-vadinar-gujarat', 'Rajkot–Jamnagar–Vadinar (Gujarat) — operational projects', 'L&T IDPL', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S053', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/coimbatore-by-pass-tamil-nadu/', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/coimbatore-by-pass-tamil-nadu', 'Coimbatore By-pass (Tamil Nadu) — operational projects', 'L&T IDPL', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S054', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/chennai-tada-tamil-nadu/', 'https://www.lntidpl.com/businesses/roads/gallery/operational-projects/chennai-tada-tamil-nadu', 'Chennai–Tada (Tamil Nadu) — operational projects', 'L&T IDPL', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S055', 'https://www.business-standard.com/article/companies/nhai-awards-rs-1-047-cr-dwarka-eway-package-to-l-t-under-bharatnmala-118031300932_1.html', 'https://www.business-standard.com/article/companies/nhai-awards-rs-1-047-cr-dwarka-eway-package-to-l-t-under-bharatnmala-118031300932_1.html', 'NHAI awards Rs 1,047 cr Dwarka EWay package to L&T under Bharatmala', 'Business Standard', 'News', 3, '2018-03-13', 'day', '2026-09-28'),
+  ('S056', 'https://www.nbmcw.com/news/roads-highways/l-t-construction-secures-road-rail-projects.html', 'https://www.nbmcw.com/news/roads-highways/l-t-construction-secures-road-rail-projects.html', 'L&T Construction secures road & rail projects (Delhi–Vadodara Expressway packages 11 & 22)', 'NBM&CW', 'Trade publication', 3, NULL, 'unknown', '2026-09-28'),
+  ('S057', 'https://www.business-standard.com/article/news-cm/l-t-gains-after-winning-orders-118090300165_1.html', 'https://www.business-standard.com/article/news-cm/l-t-gains-after-winning-orders-118090300165_1.html', 'L&T gains after winning orders (MSRDC Samruddhi package 10, ₹2,095 cr)', 'Business Standard', 'News', 3, '2018-09-03', 'day', '2026-09-28'),
+  ('S058', 'https://en.wikipedia.org/wiki/Atal_Setu,_Goa', 'https://en.wikipedia.org/wiki/atal_setu,_goa', 'Atal Setu, Goa', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S059', 'https://www.business-standard.com/article/pti-stories/cable-stayed-atal-setu-inaugurated-on-mandovi-river-in-goa-119012700643_1.html', 'https://www.business-standard.com/article/pti-stories/cable-stayed-atal-setu-inaugurated-on-mandovi-river-in-goa-119012700643_1.html', 'Cable-stayed ''Atal Setu'' inaugurated on Mandovi river in Goa', 'Business Standard', 'News', 3, '2019-01-27', 'day', '2026-09-28'),
+  ('S060', 'https://www.larsentoubro.com/atal-setu', 'https://www.larsentoubro.com/atal-setu', 'Atal Setu | Larsen & Toubro', 'Larsen & Toubro', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S061', 'https://en.wikipedia.org/wiki/Nivedita_Setu', 'https://en.wikipedia.org/wiki/nivedita_setu', 'Nivedita Setu', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S062', 'https://en.wikipedia.org/wiki/Second_Ishwar_Gupta_Setu', 'https://en.wikipedia.org/wiki/second_ishwar_gupta_setu', 'Second Ishwar Gupta Setu', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S063', 'https://en.wikipedia.org/wiki/Bandra%E2%80%93Worli_Sea_Link', 'https://en.wikipedia.org/wiki/bandra%e2%80%93worli_sea_link', 'Bandra–Worli Sea Link', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S064', 'https://msrdc.in/Site/Common/ProjectListDetails.aspx?ID=66&MainId=18', 'https://msrdc.in/site/common/projectlistdetails.aspx?id=66&mainid=18', 'Bandra Worli Sea Link — project details', 'MSRDC', 'Authority website', 1, NULL, 'unknown', '2026-09-28'),
+  ('S065', 'https://www.domain-b.com/economy/infrastructure/roads/bandra-worli-sea-link-cost-rose-6-fold-to-rs1-600-crore', 'https://www.domain-b.com/economy/infrastructure/roads/bandra-worli-sea-link-cost-rose-6-fold-to-rs1-600-crore', 'Bandra-Worli Sea Link: cost rose 6-fold to Rs 1,600 crore', 'Domain-b', 'News', 3, NULL, 'unknown', '2026-09-28'),
+  ('S066', 'https://www.hccindia.com/markets/highways-roads-bridges', 'https://www.hccindia.com/markets/highways-roads-bridges', 'Highways, roads & bridges — HCC', 'HCC', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S067', 'https://en.wikipedia.org/wiki/Hindustan_Construction_Company', 'https://en.wikipedia.org/wiki/hindustan_construction_company', 'Hindustan Construction Company', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S068', 'https://www.irb.co.in/home/tot-project/mumbai-pune-expressway-old-mumbai-pune-nh-48-projects-2/', 'https://www.irb.co.in/home/tot-project/mumbai-pune-expressway-old-mumbai-pune-nh-48-projects-2', 'Mumbai–Pune Expressway & Old Mumbai–Pune (NH-48) Projects (TOT)', 'IRB Infrastructure Developers', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S069', 'https://www.irb.co.in/home/milestones/', 'https://www.irb.co.in/home/milestones', 'IRB Milestones', 'IRB Infrastructure Developers', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S070', 'https://www.irb.co.in/home/2017/09/29/irb-infras-pathankot-amritsar-highway-project-set-to-be-transferred-to-irb-invit-fund-by-end-of-the-month/', 'https://www.irb.co.in/home/2017/09/29/irb-infras-pathankot-amritsar-highway-project-set-to-be-transferred-to-irb-invit-fund-by-end-of-the-month', 'IRB Infra''s Pathankot–Amritsar highway project set to be transferred to IRB InvIT', 'IRB Infrastructure Developers', 'Company press release', 2, '2017-09-29', 'day', '2026-09-28'),
+  ('S071', 'https://www.irb.co.in/home/ongoing-concessions/ahmedabad-vadodara-national-highway-8/', 'https://www.irb.co.in/home/ongoing-concessions/ahmedabad-vadodara-national-highway-8', 'Ahmedabad – Vadodara NH 8 (ongoing concessions)', 'IRB Infrastructure Developers', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S072', 'https://www.business-standard.com/article/companies/adani-enterprises-bags-rs-1-169-cr-highway-project-from-nhai-in-odisha-121040201050_1.html', 'https://www.business-standard.com/article/companies/adani-enterprises-bags-rs-1-169-cr-highway-project-from-nhai-in-odisha-121040201050_1.html', 'Adani Enterprises bags Rs 1,169 cr highway project from NHAI in Odisha', 'Business Standard', 'News', 3, '2021-04-02', 'day', '2026-09-28'),
+  ('S073', 'https://www.business-standard.com/article/news-cm/adani-transport-bags-two-nhai-road-projects-in-telangana-119031200272_1.html', 'https://www.business-standard.com/article/news-cm/adani-transport-bags-two-nhai-road-projects-in-telangana-119031200272_1.html', 'Adani Transport bags two NHAI road projects in Telangana', 'Business Standard', 'News', 3, '2019-03-12', 'day', '2026-09-28'),
+  ('S074', 'https://www.adanienterprises.com/newsroom/media-releases/adani-enterprises-bags-indias-largest-expressway-project', 'https://www.adanienterprises.com/newsroom/media-releases/adani-enterprises-bags-indias-largest-expressway-project', 'Adani Enterprises bags India''s largest expressway project', 'Adani Enterprises', 'Company press release', 2, NULL, 'unknown', '2026-09-28'),
+  ('S075', 'https://www.adanienterprises.com/businesses/road-metro-and-rail', 'https://www.adanienterprises.com/businesses/road-metro-and-rail', 'Road, Metro and Rail Infra — Adani Enterprises', 'Adani Enterprises', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S076', 'https://www.businesstoday.in/latest/corporate/story/all-about-navayuga-engineering-company-makers-of-the-silkyara-tunnel-where-41-workers-were-stuck-407911-2023-12-01', 'https://www.businesstoday.in/latest/corporate/story/all-about-navayuga-engineering-company-makers-of-the-silkyara-tunnel-where-41-workers-were-stuck-407911-2023-12-01', 'All about Navayuga Engineering Company, makers of the Silkyara tunnel', 'Business Today', 'News', 3, '2023-12-01', 'day', '2026-09-28'),
+  ('S077', 'https://en.wikipedia.org/wiki/Dhola%E2%80%93Sadiya_Bridge', 'https://en.wikipedia.org/wiki/dhola%e2%80%93sadiya_bridge', 'Dhola–Sadiya Bridge', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S078', 'https://en.wikipedia.org/wiki/Banihal_Qazigund_Road_Tunnel', 'https://en.wikipedia.org/wiki/banihal_qazigund_road_tunnel', 'Banihal Qazigund Road Tunnel', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S079', 'https://swarajyamag.com/infrastructure/niif-invests-rs-3036-crore-in-navayuga-quazigund-banihal-expressway-tunnel-road-in-jammu-and-kashmir', 'https://swarajyamag.com/infrastructure/niif-invests-rs-3036-crore-in-navayuga-quazigund-banihal-expressway-tunnel-road-in-jammu-and-kashmir', 'NIIF invests Rs 3,036 crore in Navayuga Quazigund-Banihal Expressway tunnel road', 'Swarajya', 'News', 3, NULL, 'unknown', '2026-09-28'),
+  ('S080', 'https://indianinfrastructure.com/2017/04/01/himalayan-landmark/', 'https://indianinfrastructure.com/2017/04/01/himalayan-landmark', 'Himalayan landmark: Asia''s longest road tunnel inaugurated in Jammu & Kashmir', 'Indian Infrastructure', 'Trade publication', 3, '2017-04-01', 'day', '2026-09-28'),
+  ('S081', 'https://theprint.in/theprint-primer/chenani-nashri-a-tunnel-at-the-end-of-a-struggle/91/', 'https://theprint.in/theprint-primer/chenani-nashri-a-tunnel-at-the-end-of-a-struggle/91', 'Chenani-Nashri — a tunnel at the end of a struggle', 'ThePrint', 'News', 3, NULL, 'unknown', '2026-09-28'),
+  ('S082', 'https://www.business-standard.com/article/companies/tata-projects-wins-rs-2-100-cr-chennai-peripheral-ring-road-project-phase-1-121092700779_1.html', 'https://www.business-standard.com/article/companies/tata-projects-wins-rs-2-100-cr-chennai-peripheral-ring-road-project-phase-1-121092700779_1.html', 'Tata Projects wins Rs 2,100 cr Chennai Peripheral Ring Road project phase-1', 'Business Standard', 'News', 3, '2021-09-27', 'day', '2026-09-28'),
+  ('S083', 'https://www.koreatimes.co.kr/business/companies/20240123/daewoo-ec-completes-construction-project-of-indias-major-sea-bridge-in-mumbai', 'https://www.koreatimes.co.kr/business/companies/20240123/daewoo-ec-completes-construction-project-of-indias-major-sea-bridge-in-mumbai', 'Daewoo E&C completes construction project of India''s major sea bridge in Mumbai', 'The Korea Times', 'News', 3, '2024-01-23', 'day', '2026-09-28'),
+  ('S084', 'https://en.wikipedia.org/wiki/Kacchi_Dargah%E2%80%93Bidupur_Bridge', 'https://en.wikipedia.org/wiki/kacchi_dargah%e2%80%93bidupur_bridge', 'Kacchi Dargah–Bidupur Bridge', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S085', 'https://swarajyamag.com/news-brief/bihar-nitish-kumar-inaugurates-6-lane-kacchi-dargah-bidupur-ganga-bridge-connecting-patna-to-raghopur', 'https://swarajyamag.com/news-brief/bihar-nitish-kumar-inaugurates-6-lane-kacchi-dargah-bidupur-ganga-bridge-connecting-patna-to-raghopur', 'Bihar: Nitish Kumar inaugurates 6-lane Kacchi Dargah-Bidupur Ganga bridge, connecting Patna to Raghopur', 'Swarajya', 'News', 3, NULL, 'unknown', '2026-09-28'),
+  ('S086', 'https://www.koreaherald.com/article/3390042', 'https://www.koreaherald.com/article/3390042', 'Bridging hope: Daewoo E&C wins large-scale bridge projects in India, Africa', 'The Korea Herald', 'News', 3, '2024-05-10', 'day', '2026-09-28'),
+  ('S087', 'https://www.tunnelsandtunnelling.com/news/strabag-jv-wins-rohtang-job/', 'https://www.tunnelsandtunnelling.com/news/strabag-jv-wins-rohtang-job', 'Strabag JV wins Rohtang job', 'Tunnels & Tunnelling', 'Trade publication', 3, NULL, 'unknown', '2026-09-28'),
+  ('S088', 'https://international.strabag.com/en/projects/rohtang-atal-highway-tunnel', 'https://international.strabag.com/en/projects/rohtang-atal-highway-tunnel', 'Rohtang (Atal) Highway Tunnel', 'STRABAG', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S089', 'https://www.afcons.com/en/bu/surface-transport', 'https://www.afcons.com/en/bu/surface-transport', 'Surface Transport — Afcons', 'Afcons Infrastructure', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S090', 'https://www.business-standard.com/article/economy-policy/up-selects-developers-for-agra-lucknow-expressway-project-114081300597_1.html', 'https://www.business-standard.com/article/economy-policy/up-selects-developers-for-agra-lucknow-expressway-project-114081300597_1.html', 'UP selects developers for Agra-Lucknow expressway project', 'Business Standard', 'News', 3, '2014-08-13', 'day', '2026-09-28'),
+  ('S091', 'https://en.wikipedia.org/wiki/Agra%E2%80%93Lucknow_Expressway', 'https://en.wikipedia.org/wiki/agra%e2%80%93lucknow_expressway', 'Agra–Lucknow Expressway', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S092', 'https://www.freepressjournal.in/business/13-lowest-bidders-named-for-samruddhi-mahamarg-e-way', 'https://www.freepressjournal.in/business/13-lowest-bidders-named-for-samruddhi-mahamarg-e-way', '13 lowest bidders named for Samruddhi Mahamarg E-way', 'Free Press Journal', 'News', 3, NULL, 'unknown', '2026-09-28'),
+  ('S093', 'https://infrastory.com/2018/09/04/contracts-awarded-for-indias-longest-expressway-the-701km-mumbai-nagpur-samruddhi-mahamarg/', 'https://infrastory.com/2018/09/04/contracts-awarded-for-indias-longest-expressway-the-701km-mumbai-nagpur-samruddhi-mahamarg', 'Contracts awarded for India''s longest expressway — the 701 km Mumbai Nagpur Samruddhi Mahamarg', 'InfraStory', 'Trade publication', 3, '2018-09-04', 'day', '2026-09-28'),
+  ('S094', 'https://www.nbmcw.com/news/up-awards-8-phases-of-23-000-cr-purvanchal-e-way.html', 'https://www.nbmcw.com/news/up-awards-8-phases-of-23-000-cr-purvanchal-e-way.html', 'UP awards 8 phases of ₹23,000-cr Purvanchal e-way', 'NBM&CW', 'Trade publication', 3, NULL, 'unknown', '2026-09-28'),
+  ('S095', 'https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1772308&reg=48&lang=2', 'https://www.pib.gov.in/pressreleaseshare.aspx?prid=1772308&reg=48&lang=2', 'PM inaugurates Purvanchal Expressway', 'PIB', 'Government press release', 1, '2021-11-16', 'day', '2026-09-28'),
+  ('S096', 'https://swarajyamag.com/insta/apco-ashoka-buildcon-gawar-constructiondilip-buildcon-to-execute-ups-ambitious-296-km-bundelkhand-expressway', 'https://swarajyamag.com/insta/apco-ashoka-buildcon-gawar-constructiondilip-buildcon-to-execute-ups-ambitious-296-km-bundelkhand-expressway', 'Apco, Ashoka Buildcon, Gawar Construction, Dilip Buildcon to execute UP''s 296-km Bundelkhand Expressway', 'Swarajya', 'News', 3, NULL, 'unknown', '2026-09-28'),
+  ('S097', 'https://www.thehawk.in/news/states-and-uts/up-cabinet-gives-its-nod-for-construction-companies-for-2-expressways', 'https://www.thehawk.in/news/states-and-uts/up-cabinet-gives-its-nod-for-construction-companies-for-2-expressways', 'UP Cabinet gives its nod for construction companies for 2 expressways', 'The Hawk', 'News', 3, '2019-11-01', 'month', '2026-09-28'),
+  ('S098', 'https://swarajyamag.com/infrastructure/pm-modi-to-inaugurate-bundelkhand-expressway-on-16-july-uttar-pradeshs-expressway-network-to-cross-1200-km-mark', 'https://swarajyamag.com/infrastructure/pm-modi-to-inaugurate-bundelkhand-expressway-on-16-july-uttar-pradeshs-expressway-network-to-cross-1200-km-mark', 'PM Modi to inaugurate Bundelkhand Expressway on 16 July', 'Swarajya', 'News', 3, '2022-07-01', 'month', '2026-09-28'),
+  ('S099', 'https://en.wikipedia.org/wiki/Awadh_Expressway', 'https://en.wikipedia.org/wiki/awadh_expressway', 'Awadh Expressway', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S100', 'https://themetrorailguy.com/2022/08/02/apco-wins-delhi-katra-expressways-package-17-in-jk/', 'https://themetrorailguy.com/2022/08/02/apco-wins-delhi-katra-expressways-package-17-in-jk', 'APCO wins Delhi–Katra Expressway''s Package 17 in J&K', 'The Metro Rail Guy', 'Specialist portal', 4, '2022-08-02', 'day', '2026-09-28'),
+  ('S101', 'https://themetrorailguy.com/2022/08/01/apco-wins-jewar-airports-link-with-delhi-mumbai-expressway/', 'https://themetrorailguy.com/2022/08/01/apco-wins-jewar-airports-link-with-delhi-mumbai-expressway', 'APCO wins Jewar Airport''s link with Delhi–Mumbai Expressway', 'The Metro Rail Guy', 'Specialist portal', 4, '2022-08-01', 'day', '2026-09-28'),
+  ('S102', 'https://upeida.up.gov.in/en/page/gorakhpur-link-expressway', 'https://upeida.up.gov.in/en/page/gorakhpur-link-expressway', 'Gorakhpur Link Expressway', 'UPEIDA', 'Authority website', 1, NULL, 'unknown', '2026-09-28'),
+  ('S103', 'https://swarajyamag.com/news-brief/rs-7283-crore-gorakhpur-link-expressway-inaugurated-by-cm-yogi-to-connect-four-up-districts', 'https://swarajyamag.com/news-brief/rs-7283-crore-gorakhpur-link-expressway-inaugurated-by-cm-yogi-to-connect-four-up-districts', 'Rs 7,283 crore Gorakhpur Link Expressway inaugurated by CM Yogi', 'Swarajya', 'News', 3, '2025-06-01', 'month', '2026-09-28'),
+  ('S104', 'https://www.business-standard.com/article/news-cm/g-r-infraprojects-secures-loa-for-5-nhai-road-projects-122033000861_1.html', 'https://www.business-standard.com/article/news-cm/g-r-infraprojects-secures-loa-for-5-nhai-road-projects-122033000861_1.html', 'G R Infraprojects secures LoA for 5 NHAI road projects', 'Business Standard', 'News', 3, '2022-03-30', 'day', '2026-09-28'),
+  ('S105', 'https://www.business-standard.com/amp/markets/capital-market-news/g-r-infraprojects-wins-rs-1-454-cr-nhai-contract-for-highway-upgrade-in-gujarat-126033100156_1.html', 'https://www.business-standard.com/amp/markets/capital-market-news/g-r-infraprojects-wins-rs-1-454-cr-nhai-contract-for-highway-upgrade-in-gujarat-126033100156_1.html', 'G R Infraprojects wins Rs 1,454-cr NHAI contract for highway upgrade in Gujarat', 'Business Standard', 'News', 3, '2026-03-31', 'day', '2026-09-28'),
+  ('S106', 'https://megaproject.com/news/roadandbridge/agra-gwalior-to-guwahati-ring-road-12-upcoming-highway-projects-that-could-reshape-travel', 'https://megaproject.com/news/roadandbridge/agra-gwalior-to-guwahati-ring-road-12-upcoming-highway-projects-that-could-reshape-travel', 'Agra-Gwalior to Guwahati Ring Road: 12 upcoming highway projects', 'Megaproject', 'Specialist portal', 4, NULL, 'unknown', '2026-09-28'),
+  ('S107', 'https://deshgujarat.com/2026/05/06/delhi-mumbai-expressway-rsiil-among-nine-bidders-for-vadodara-virar-package-8-despite-earlier-contract-termination/', 'https://deshgujarat.com/2026/05/06/delhi-mumbai-expressway-rsiil-among-nine-bidders-for-vadodara-virar-package-8-despite-earlier-contract-termination', 'Delhi-Mumbai Expressway: RSIIL among nine bidders for Vadodara–Virar Package 8 despite earlier contract termination', 'DeshGujarat', 'News', 3, '2026-05-06', 'day', '2026-09-28'),
+  ('S108', 'https://deshgujarat.com/2026/05/28/delhi-mumbai-expressway-nhai-invites-fresh-bids-for-pending-work-on-package-9-of-vadodara-virar-section/', 'https://deshgujarat.com/2026/05/28/delhi-mumbai-expressway-nhai-invites-fresh-bids-for-pending-work-on-package-9-of-vadodara-virar-section', 'Delhi-Mumbai Expressway: NHAI invites fresh bids for pending work on Package 9 of Vadodara–Virar section', 'DeshGujarat', 'News', 3, '2026-05-28', 'day', '2026-09-28'),
+  ('S109', 'https://www.businesstoday.in/india/story/delhi-mumbai-expressway-completion-pushed-to-2027-28-as-delays-hit-gujarat-stretches-507463-2025-12-19', 'https://www.businesstoday.in/india/story/delhi-mumbai-expressway-completion-pushed-to-2027-28-as-delays-hit-gujarat-stretches-507463-2025-12-19', 'Delhi Mumbai Expressway completion pushed to 2027-28 as delays hit Gujarat stretches', 'Business Today', 'News', 3, '2025-12-19', 'day', '2026-09-28'),
+  ('S110', 'https://www.business-standard.com/markets/capital-market-news/j-kumar-infra-rises-on-securing-loa-for-road-project-in-thane-124100300369_1.html', 'https://www.business-standard.com/markets/capital-market-news/j-kumar-infra-rises-on-securing-loa-for-road-project-in-thane-124100300369_1.html', 'J Kumar Infra rises on securing LoA for road project in Thane', 'Business Standard', 'News', 3, '2024-10-03', 'day', '2026-09-28'),
+  ('S111', 'https://www.jkumar.com/brochure.pdf', 'https://www.jkumar.com/brochure.pdf', 'J. Kumar Infraprojects Ltd — company brochure', 'J. Kumar Infraprojects', 'Company brochure', 2, NULL, 'unknown', '2026-09-28'),
+  ('S112', 'https://pateleng.com/infrastructure.php', 'https://pateleng.com/infrastructure.php', 'Patel Engineering — Infrastructure', 'Patel Engineering', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S113', 'https://www.astaldi.com/en/press-releases/astaldi-carry-out-versova-bandra-sea-link-project-mumbai-total-contract-value', 'https://www.astaldi.com/en/press-releases/astaldi-carry-out-versova-bandra-sea-link-project-mumbai-total-contract-value', 'Astaldi to carry out the Versova–Bandra Sea Link project in Mumbai — contract value EUR 780 million', 'Astaldi (Webuild)', 'Company press release', 2, NULL, 'unknown', '2026-09-28'),
+  ('S114', 'https://www.business-standard.com/article/economy-policy/versova-bandra-sealink-project-cost-up-by-whopping-60-to-rs-11-333-cr-123031601072_1.html', 'https://www.business-standard.com/article/economy-policy/versova-bandra-sealink-project-cost-up-by-whopping-60-to-rs-11-333-cr-123031601072_1.html', 'Versova-Bandra Sealink project cost up by whopping 60% to Rs 11,333 cr', 'Business Standard', 'News', 3, '2023-03-16', 'day', '2026-09-28'),
+  ('S115', 'https://www.constructionworld.in/transport-infrastructure/highways-and-roads-infrastructure/apco-to-merge-with-webuild-in-constructing-versova-bandra-sea-link/32159', 'https://www.constructionworld.in/transport-infrastructure/highways-and-roads-infrastructure/apco-to-merge-with-webuild-in-constructing-versova-bandra-sea-link/32159', 'APCO to merge with Webuild in constructing Versova Bandra Sea Link', 'Construction World', 'Trade publication', 3, NULL, 'unknown', '2026-09-28'),
+  ('S116', 'https://theprint.in/india/bandra-versova-sea-link-crawls-to-sight-bridging-reality-deadlines-gap-still-a-challenge/2857255/', 'https://theprint.in/india/bandra-versova-sea-link-crawls-to-sight-bridging-reality-deadlines-gap-still-a-challenge/2857255', 'Bandra-Versova sea link crawls to sight; bridging reality-deadlines gap still a challenge', 'ThePrint', 'News', 3, '2026-01-01', 'year', '2026-09-28'),
+  ('S117', 'https://meil.in/transportation', 'https://meil.in/transportation', 'Transportation | MEIL', 'MEIL', 'Company website', 2, NULL, 'unknown', '2026-09-28'),
+  ('S118', 'https://swarajyamag.com/infrastructure/hyderabad-based-megha-engineering-wins-rs-14400-cr-tender-for-thane-borivali-twin-tunnel-project', 'https://swarajyamag.com/infrastructure/hyderabad-based-megha-engineering-wins-rs-14400-cr-tender-for-thane-borivali-twin-tunnel-project', 'Megha Engineering wins Rs 14,400 crore tender for Thane-Borivali twin tunnel project', 'Swarajya', 'News', 3, NULL, 'unknown', '2026-09-28'),
+  ('S119', 'https://en.wikipedia.org/wiki/Purvanchal_Expressway', 'https://en.wikipedia.org/wiki/purvanchal_expressway', 'Purvanchal Expressway', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S120', 'https://en.wikipedia.org/wiki/Bundelkhand_Expressway', 'https://en.wikipedia.org/wiki/bundelkhand_expressway', 'Bundelkhand Expressway', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S121', 'https://en.wikipedia.org/wiki/Gorakhpur_Link_Expressway', 'https://en.wikipedia.org/wiki/gorakhpur_link_expressway', 'Gorakhpur Link Expressway', 'Wikipedia', 'Encyclopedia', 4, NULL, 'unknown', '2026-09-28'),
+  ('S122', 'https://www.nhidcl.com/en/uttarakhand/Project/silkyara-bend-barkot-tunnel', 'https://www.nhidcl.com/en/uttarakhand/project/silkyara-bend-barkot-tunnel', 'Silkyara Bend–Barkot Tunnel', 'NHIDCL', 'Authority website', 1, NULL, 'unknown', '2026-09-28'),
+  ('S123', 'https://www.theweek.in/wire-updates/national/2025/04/16/des25-ukd-silkyara-breakthrough.html', 'https://www.theweek.in/wire-updates/national/2025/04/16/des25-ukd-silkyara-breakthrough.html', 'Silkyara tunnel achieves breakthrough', 'The Week (PTI)', 'News', 3, '2025-04-16', 'day', '2026-09-28'),
+  ('S124', 'https://theprint.in/india/this-tunnel-took-something-from-me-i-came-back-to-take-it-back-in-silkyara-breakthrough-some-closure/2593583/', 'https://theprint.in/india/this-tunnel-took-something-from-me-i-came-back-to-take-it-back-in-silkyara-breakthrough-some-closure/2593583', 'In Silkyara breakthrough, some closure', 'ThePrint', 'News', 3, '2025-04-01', 'month', '2026-09-28'),
+  ('S125', 'https://www.thequint.com/news/politics/akhilesh-yadav-india-longest-expressway-agra-lucknow-open-mulayam-singh-yadav-uttar-pradesh-jets-iaf-mirage-delhi', 'https://www.thequint.com/news/politics/akhilesh-yadav-india-longest-expressway-agra-lucknow-open-mulayam-singh-yadav-uttar-pradesh-jets-iaf-mirage-delhi', 'India''s longest expressway connecting Agra-Lucknow open for public', 'The Quint', 'News', 3, '2016-11-01', 'month', '2026-09-28'),
+  ('S126', 'https://www.business-standard.com/article/markets/adani-enterprises-gains-2-on-winning-ganga-expressway-project-121122100224_1.html', 'https://www.business-standard.com/article/markets/adani-enterprises-gains-2-on-winning-ganga-expressway-project-121122100224_1.html', 'Adani Enterprises gains 2% on winning Ganga Expressway project', 'Business Standard', 'News', 3, '2021-12-21', 'day', '2026-09-28'),
+  ('S127', 'https://upeida.up.gov.in/en/page/the-purvanchal-expressway', 'https://upeida.up.gov.in/en/page/the-purvanchal-expressway', 'The Purvanchal Expressway', 'UPEIDA', 'Authority website', 1, NULL, 'unknown', '2026-09-28'),
+  ('S128', 'https://upeida.up.gov.in/en/article/agra-lucknow-expressway', 'https://upeida.up.gov.in/en/article/agra-lucknow-expressway', 'Agra-Lucknow Expressway', 'UPEIDA', 'Authority website', 1, NULL, 'unknown', '2026-09-28'),
+  ('S129', 'https://upeida.up.gov.in/hi/page/bundelkhand-expressway', 'https://upeida.up.gov.in/hi/page/bundelkhand-expressway', 'Bundelkhand Expressway', 'UPEIDA', 'Authority website', 1, NULL, 'unknown', '2026-09-28');
 INSERT INTO authorities (authority_id, short_name, legal_name, level, parent_authority_id, website) VALUES
   ('A-MORTH', 'MoRTH', 'Ministry of Road Transport & Highways', 'Central', NULL, 'https://morth.nic.in'),
   ('A-BRO', 'BRO', 'Border Roads Organisation', 'Central (Ministry of Defence)', NULL, 'https://bro.gov.in'),
@@ -104,6 +190,7 @@ INSERT INTO authorities (authority_id, short_name, legal_name, level, parent_aut
   ('A-MMRDA', 'MMRDA', 'Mumbai Metropolitan Region Development Authority', 'State (Maharashtra)', NULL, 'https://mmrda.maharashtra.gov.in'),
   ('A-BMC', 'BMC', 'Brihanmumbai Municipal Corporation', 'Municipal', NULL, 'https://portal.mcgm.gov.in'),
   ('A-UPEIDA', 'UPEIDA', 'Uttar Pradesh Expressways Industrial Development Authority', 'State (Uttar Pradesh)', NULL, 'https://upeida.up.gov.in'),
+  ('A-BSRDC', 'BSRDC', 'Bihar State Road Development Corporation Ltd', 'State (Bihar)', NULL, NULL),
   ('A-NHAI', 'NHAI', 'National Highways Authority of India', 'Central', 'A-MORTH', 'https://nhai.gov.in'),
   ('A-NHIDCL', 'NHIDCL', 'National Highways & Infrastructure Development Corporation Ltd', 'Central', 'A-MORTH', 'https://nhidcl.com');
 INSERT INTO authority_aliases (authority_id, alias, alias_norm) VALUES
@@ -122,27 +209,45 @@ INSERT INTO authority_aliases (authority_id, alias, alias_norm) VALUES
   ('A-BMC', 'BMC', 'bmc'),
   ('A-BMC', 'Brihanmumbai Municipal Corporation', 'brihanmumbai municipal corporation'),
   ('A-UPEIDA', 'UPEIDA', 'upeida'),
-  ('A-UPEIDA', 'Uttar Pradesh Expressways Industrial Development Authority', 'uttar pradesh expressways industrial development authority');
-INSERT INTO companies (company_id, canonical_name, listed, country, hq_city, website, kind) VALUES
-  ('C-LT', 'Larsen & Toubro Limited', true, 'India', 'Mumbai', 'https://www.larsentoubro.com', 'EPC contractor'),
-  ('C-IHI', 'IHI Corporation', true, 'Japan', 'Tokyo', 'https://www.ihi.co.jp', 'EPC / steel structures'),
-  ('C-DAEWOO', 'Daewoo Engineering & Construction', true, 'South Korea', 'Seoul', NULL, 'EPC contractor'),
-  ('C-TPL', 'Tata Projects Limited', false, 'India', 'Hyderabad', 'https://www.tataprojects.com', 'EPC contractor'),
-  ('C-MEIL', 'Megha Engineering & Infrastructures Ltd', false, 'India', 'Hyderabad', 'https://meil.in', 'EPC contractor'),
-  ('C-HCC', 'Hindustan Construction Company Ltd', true, 'India', 'Mumbai', 'https://www.hccindia.com', 'EPC contractor'),
-  ('C-HDC', 'Hyundai Development Company', NULL, 'South Korea', NULL, NULL, 'EPC contractor'),
-  ('C-IRB', 'IRB Infrastructure Developers Ltd', true, 'India', 'Mumbai', 'https://www.irb.co.in', 'Developer / EPC'),
-  ('C-ADANI', 'Adani Enterprises Ltd', true, 'India', 'Ahmedabad', 'https://www.adanienterprises.com', 'Developer / EPC'),
-  ('C-PATEL', 'Patel Engineering Ltd', true, 'India', 'Mumbai', NULL, 'Tunnel / civil contractor'),
-  ('C-JKUMAR', 'J. Kumar Infraprojects Ltd', true, 'India', 'Mumbai', NULL, 'EPC contractor'),
-  ('C-APCO', 'APCO Infratech Pvt Ltd', false, 'India', NULL, NULL, 'EPC contractor'),
-  ('C-NECL', 'Navayuga Engineering Company Ltd', false, 'India', 'Hyderabad', NULL, 'EPC contractor'),
-  ('C-GRIL', 'G R Infraprojects Ltd', true, 'India', NULL, NULL, 'EPC contractor'),
-  ('C-PNC', 'PNC Infratech Ltd', true, 'India', NULL, NULL, 'EPC contractor'),
-  ('C-RSIIL', 'Roadway Solutions India Infra Ltd', NULL, 'India', NULL, NULL, 'EPC contractor'),
-  ('C-STRABAG', 'STRABAG', true, 'Austria', NULL, NULL, 'Tunnel / EPC contractor'),
-  ('C-AFCONS', 'Afcons Infrastructure Ltd', true, 'India', 'Mumbai', NULL, 'EPC contractor'),
-  ('C-ILFS', 'IL&FS (infrastructure arm)', NULL, 'India', NULL, NULL, 'Former contractor');
+  ('A-UPEIDA', 'Uttar Pradesh Expressways Industrial Development Authority', 'uttar pradesh expressways industrial development authority'),
+  ('A-BSRDC', 'BSRDC', 'bsrdc'),
+  ('A-BSRDC', 'Bihar State Road Development Corporation Ltd', 'bihar state road development corporation');
+INSERT INTO companies (company_id, canonical_name, parent_company_id, listed, country, hq_city, website, kind) VALUES
+  ('C-LT', 'Larsen & Toubro Limited', NULL, true, 'India', 'Mumbai', 'https://www.larsentoubro.com', 'EPC contractor'),
+  ('C-IHI', 'IHI Corporation', NULL, true, 'Japan', 'Tokyo', 'https://www.ihi.co.jp', 'EPC / steel structures'),
+  ('C-DAEWOO', 'Daewoo Engineering & Construction', NULL, true, 'South Korea', 'Seoul', NULL, 'EPC contractor'),
+  ('C-TPL', 'Tata Projects Limited', NULL, false, 'India', 'Hyderabad', 'https://www.tataprojects.com', 'EPC contractor'),
+  ('C-MEIL', 'Megha Engineering & Infrastructures Ltd', NULL, false, 'India', 'Hyderabad', 'https://meil.in', 'EPC contractor'),
+  ('C-HCC', 'Hindustan Construction Company Ltd', NULL, true, 'India', 'Mumbai', 'https://www.hccindia.com', 'EPC contractor'),
+  ('C-HDC', 'Hyundai Development Company', NULL, NULL, 'South Korea', NULL, NULL, 'EPC contractor'),
+  ('C-IRB', 'IRB Infrastructure Developers Ltd', NULL, true, 'India', 'Mumbai', 'https://www.irb.co.in', 'Developer / EPC'),
+  ('C-ADANI', 'Adani Enterprises Ltd', NULL, true, 'India', 'Ahmedabad', 'https://www.adanienterprises.com', 'Developer / EPC'),
+  ('C-PATEL', 'Patel Engineering Ltd', NULL, true, 'India', 'Mumbai', NULL, 'Tunnel / civil contractor'),
+  ('C-JKUMAR', 'J. Kumar Infraprojects Ltd', NULL, true, 'India', 'Mumbai', NULL, 'EPC contractor'),
+  ('C-APCO', 'APCO Infratech Pvt Ltd', NULL, false, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-NECL', 'Navayuga Engineering Company Ltd', NULL, false, 'India', 'Hyderabad', NULL, 'EPC contractor'),
+  ('C-GRIL', 'G R Infraprojects Ltd', NULL, true, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-PNC', 'PNC Infratech Ltd', NULL, true, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-RSIIL', 'Roadway Solutions India Infra Ltd', NULL, NULL, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-STRABAG', 'STRABAG', NULL, true, 'Austria', NULL, NULL, 'Tunnel / EPC contractor'),
+  ('C-AFCONS', 'Afcons Infrastructure Ltd', NULL, true, 'India', 'Mumbai', NULL, 'EPC contractor'),
+  ('C-ILFS', 'IL&FS (infrastructure arm)', NULL, NULL, 'India', NULL, NULL, 'Former contractor'),
+  ('C-LTIDPL', 'L&T Infrastructure Development Projects Ltd', 'C-LT', false, 'India', 'Chennai', 'https://www.lntidpl.com', 'Road concessionaire (BOT)'),
+  ('C-ARTL', 'Adani Road Transport Ltd', 'C-ADANI', false, 'India', NULL, NULL, 'Road developer (HAM/BOT/TOT)'),
+  ('C-DSI', 'DSI-Bridgecon', NULL, NULL, NULL, NULL, NULL, 'Specialist (stay-cable / post-tensioning)'),
+  ('C-NCC', 'NCC Ltd', NULL, true, 'India', 'Hyderabad', NULL, 'EPC contractor'),
+  ('C-SADBHAV', 'Sadbhav Engineering Ltd', NULL, true, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-RINFRA', 'Reliance Infrastructure Ltd', NULL, true, 'India', 'Mumbai', NULL, 'EPC contractor'),
+  ('C-MONTE', 'Montecarlo Ltd', NULL, NULL, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-GAYATRI', 'Gayatri Projects Ltd', NULL, true, 'India', 'Hyderabad', NULL, 'EPC contractor'),
+  ('C-DBL', 'Dilip Buildcon Ltd', NULL, true, 'India', 'Bhopal', NULL, 'EPC contractor'),
+  ('C-BSCPL', 'BSCPL Infrastructure Ltd', NULL, NULL, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-ASHOKA', 'Ashoka Buildcon Ltd', NULL, true, 'India', 'Nashik', NULL, 'EPC contractor'),
+  ('C-GAWAR', 'Gawar Construction Ltd', NULL, NULL, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-OSE', 'Oriental Structural Engineers Pvt Ltd', NULL, false, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-KPCL', 'KPCL (as named in source)', NULL, NULL, 'India', NULL, NULL, 'Consortium member — full legal name not captured'),
+  ('C-LEIGHTON', 'Leighton India', NULL, NULL, 'India', NULL, NULL, 'EPC contractor'),
+  ('C-WEBUILD', 'Webuild S.p.A.', NULL, true, 'Italy', NULL, NULL, 'EPC contractor');
 INSERT INTO company_aliases (company_id, alias, alias_norm) VALUES
   ('C-LT', 'Larsen & Toubro Limited', 'larsen toubro'),
   ('C-LT', 'L&T', 'l t'),
@@ -191,7 +296,46 @@ INSERT INTO company_aliases (company_id, alias, alias_norm) VALUES
   ('C-AFCONS', 'AFCONS', 'afcons'),
   ('C-ILFS', 'IL&FS (infrastructure arm)', 'il fs infrastructure arm'),
   ('C-ILFS', 'IL&FS', 'il fs'),
-  ('C-ILFS', 'ITNL', 'itnl');
+  ('C-ILFS', 'ITNL', 'itnl'),
+  ('C-ILFS', 'IL&FS Transportation Networks Ltd', 'il fs transportation networks'),
+  ('C-ILFS', 'IL&FS Transportation Network Limited', 'il fs transportation network'),
+  ('C-LTIDPL', 'L&T Infrastructure Development Projects Ltd', 'l t infrastructure development projects'),
+  ('C-LTIDPL', 'L&T IDPL', 'l t idpl'),
+  ('C-LTIDPL', 'IDPL', 'idpl'),
+  ('C-ARTL', 'Adani Road Transport Ltd', 'adani road transport'),
+  ('C-ARTL', 'ARTL', 'artl'),
+  ('C-ARTL', 'Adani Transport Ltd', 'adani transport'),
+  ('C-DSI', 'DSI-Bridgecon', 'dsi bridgecon'),
+  ('C-NCC', 'NCC Ltd', 'ncc'),
+  ('C-NCC', 'Nagarjuna Construction Company', 'nagarjuna construction company'),
+  ('C-NCC', 'Nagarjuna Construction', 'nagarjuna construction'),
+  ('C-SADBHAV', 'Sadbhav Engineering Ltd', 'sadbhav engineering'),
+  ('C-SADBHAV', 'Sadbhav', 'sadbhav'),
+  ('C-RINFRA', 'Reliance Infrastructure Ltd', 'reliance infrastructure'),
+  ('C-RINFRA', 'RInfra', 'rinfra'),
+  ('C-RINFRA', 'Reliance Infra', 'reliance infra'),
+  ('C-MONTE', 'Montecarlo Ltd', 'montecarlo'),
+  ('C-GAYATRI', 'Gayatri Projects Ltd', 'gayatri projects'),
+  ('C-DBL', 'Dilip Buildcon Ltd', 'dilip buildcon'),
+  ('C-DBL', 'DBL', 'dbl'),
+  ('C-DBL', 'DilipBuildcon', 'dilipbuildcon'),
+  ('C-BSCPL', 'BSCPL Infrastructure Ltd', 'bscpl infrastructure'),
+  ('C-BSCPL', 'BSCPL', 'bscpl'),
+  ('C-ASHOKA', 'Ashoka Buildcon Ltd', 'ashoka buildcon'),
+  ('C-GAWAR', 'Gawar Construction Ltd', 'gawar construction'),
+  ('C-GAWAR', 'Gawar Constructions Limited', 'gawar constructions'),
+  ('C-OSE', 'Oriental Structural Engineers Pvt Ltd', 'oriental structural engineers'),
+  ('C-OSE', 'Oriental Structural Engineering', 'oriental structural engineering'),
+  ('C-OSE', 'OSE', 'ose'),
+  ('C-KPCL', 'KPCL (as named in source)', 'kpcl as named in source'),
+  ('C-KPCL', 'KPCL', 'kpcl'),
+  ('C-LEIGHTON', 'Leighton India', 'leighton india'),
+  ('C-LEIGHTON', 'Leighton India Contractors', 'leighton india contractors'),
+  ('C-LEIGHTON', 'Leighton', 'leighton'),
+  ('C-WEBUILD', 'Webuild S.p.A.', 'webuild s p a'),
+  ('C-WEBUILD', 'Astaldi', 'astaldi'),
+  ('C-WEBUILD', 'Astaldi S.p.A.', 'astaldi s p a'),
+  ('C-WEBUILD', 'Webuild', 'webuild');
 INSERT INTO corridors (corridor_id, name) VALUES
   ('CR-DELHI-MUMBAI', 'Delhi–Mumbai'),
   ('CR-MUMBAI-NAGPUR', 'Mumbai–Nagpur'),
@@ -207,7 +351,52 @@ INSERT INTO corridors (corridor_id, name) VALUES
   ('CR-MANALI-LEH', 'Manali–Leh'),
   ('CR-DELHI-AMRITSAR-KATRA', 'Delhi–Amritsar–Katra'),
   ('CR-NAGPUR-GOA', 'Nagpur–Goa'),
-  ('CR-VADHAVAN-SAMRUDDHI', 'Vadhavan–Samruddhi');
+  ('CR-VADHAVAN-SAMRUDDHI', 'Vadhavan–Samruddhi'),
+  ('CR-KRISHNAGIRI-WALAJAHPET-NH-46', 'Krishnagiri–Walajahpet (NH-46)'),
+  ('CR-PANIPAT-ELEVATED-CORRIDOR', 'Panipat Elevated Corridor'),
+  ('CR-SAMAKHIALI-GANDHIDHAM', 'Samakhiali–Gandhidham'),
+  ('CR-BEAWAR-PALI-PINDWARA', 'Beawar–Pali–Pindwara'),
+  ('CR-PALANPUR-SWAROOPGANJ', 'Palanpur–Swaroopganj'),
+  ('CR-PIMPALGAON-NASHIK-GONDE', 'Pimpalgaon–Nashik–Gonde'),
+  ('CR-RAJKOT-JAMNAGAR-VADINAR', 'Rajkot–Jamnagar–Vadinar'),
+  ('CR-VADODARA-BHARUCH', 'Vadodara–Bharuch'),
+  ('CR-COIMBATORE-BYPASS', 'Coimbatore Bypass'),
+  ('CR-CHENNAI-TADA', 'Chennai–Tada'),
+  ('CR-ATAL-SETU-GOA-MANDOVI-CABLE-STAYED-BRIDGE', 'Atal Setu (Goa) — Mandovi cable-stayed bridge'),
+  ('CR-NIVEDITA-SETU-SECOND-VIVEKANANDA-BRIDGE', 'Nivedita Setu (Second Vivekananda Bridge)'),
+  ('CR-SECOND-ISHWAR-GUPTA-SETU', 'Second Ishwar Gupta Setu'),
+  ('CR-KACCHI-DARGAH-BIDUPUR-GANGA-BRIDGE', 'Kacchi Dargah–Bidupur Ganga Bridge'),
+  ('CR-AGRA-LUCKNOW-EXPRESSWAY', 'Agra–Lucknow Expressway'),
+  ('CR-BANDRA-WORLI-SEA-LINK', 'Bandra–Worli Sea Link'),
+  ('CR-VERSOVA-BANDRA-SEA-LINK', 'Versova–Bandra Sea Link'),
+  ('CR-MUMBAI-PUNE-EXPRESSWAY', 'Mumbai–Pune Expressway'),
+  ('CR-HYDERABAD-OUTER-RING-ROAD-TOT', 'Hyderabad Outer Ring Road (TOT)'),
+  ('CR-SURAT-DAHISAR-NH-8', 'Surat–Dahisar (NH-8)'),
+  ('CR-JAIPUR-DEOLI', 'Jaipur–Deoli'),
+  ('CR-TALEGAON-AMRAVATI', 'Talegaon–Amravati'),
+  ('CR-PATHANKOT-AMRITSAR-NH-15', 'Pathankot–Amritsar (NH-15)'),
+  ('CR-AHMEDABAD-VADODARA-NH-8-SIX-LANING-EXPRESSWAY', 'Ahmedabad–Vadodara (NH-8 six-laning + Expressway)'),
+  ('CR-DHOLA-SADIYA-BRIDGE-BHUPEN-HAZARIKA-SETU', 'Dhola–Sadiya Bridge (Bhupen Hazarika Setu)'),
+  ('CR-SILKYARA-BEND-BARKOT-TUNNEL', 'Silkyara Bend–Barkot Tunnel'),
+  ('CR-BANIHAL-QAZIGUND-ROAD-TUNNEL', 'Banihal–Qazigund Road Tunnel'),
+  ('CR-CHENANI-NASHRI-TUNNEL-DR-SYAMA-PRASAD-MOOKERJEE-TUNNEL', 'Chenani–Nashri Tunnel (Dr Syama Prasad Mookerjee Tunnel)'),
+  ('CR-PURVANCHAL-EXPRESSWAY', 'Purvanchal Expressway'),
+  ('CR-BUNDELKHAND-EXPRESSWAY', 'Bundelkhand Expressway'),
+  ('CR-GORAKHPUR-LINK-EXPRESSWAY', 'Gorakhpur Link Expressway'),
+  ('CR-AWADH-EXPRESSWAY-LUCKNOW-KANPUR', 'Awadh Expressway (Lucknow–Kanpur)'),
+  ('CR-JAMMU-UDHAMPUR-FOUR-LANING-NH-1A', 'Jammu–Udhampur four-laning (NH-1A)'),
+  ('CR-BADAKUMARI-KARKI-NH-130CD-RAIPUR-VISAKHAPATNAM-EC', 'Badakumari–Karki (NH-130CD, Raipur–Visakhapatnam EC)'),
+  ('CR-SURYAPET-KHAMMAM-NH-365BB', 'Suryapet–Khammam (NH-365BB)'),
+  ('CR-MANCHERIAL-REPALLEWADA-NH-363', 'Mancherial–Repallewada (NH-363)'),
+  ('CR-CHENNAI-PERIPHERAL-RING-ROAD-PHASE-1-NORTHERN-PORT-ACCESS-ROAD', 'Chennai Peripheral Ring Road — Phase 1 (Northern Port Access Road)'),
+  ('CR-THANE-ELEVATED-ROAD-ANAND-NAGAR-SAKET-EEH', 'Thane Elevated Road (Anand Nagar–Saket, EEH)'),
+  ('CR-EASTERN-FREEWAY-PANJARPOLE-TO-CHEMBUR-MANKHURD-LINK-ROAD-SECTION', 'Eastern Freeway — Panjarpole to Chembur–Mankhurd Link Road section'),
+  ('CR-EAST-WEST-CORRIDOR-ASSAM-PATEL-ENGINEERING-SECTION', 'East–West Corridor (Assam) — Patel Engineering section'),
+  ('CR-SURAT-MANOR-TOLLWAY', 'Surat–Manor Tollway'),
+  ('CR-VARANASI-SHAKTINAGAR-ROAD-FOUR-LANING-SH-5A', 'Varanasi–Shaktinagar Road four-laning (SH-5A)'),
+  ('CR-BHIMASAR-ANJAR-BHUJ-NH-341', 'Bhimasar–Anjar–Bhuj (NH-341)'),
+  ('CR-AGRA-GWALIOR-GREENFIELD-EXPRESSWAY', 'Agra–Gwalior Greenfield Expressway'),
+  ('CR-NH-56-FOUR-LANING-GUJARAT-PACKAGE-VI', 'NH-56 four-laning, Gujarat (Package VI)');
 
 -- ITI-P-0001 Delhi–Mumbai Expressway
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -223,20 +412,46 @@ INSERT INTO project_states (project_id, state_code, is_primary) VALUES
   ('ITI-P-0001', 'IN-MP', false),
   ('ITI-P-0001', 'IN-GJ', false),
   ('ITI-P-0001', 'IN-MH', false);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0001', 'Pkgs 11 & 22', 'Delhi–Vadodara section (two packages, 36 km combined)', 36, NULL, NULL, 'REPORTED', 'S056');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0001' AND package_no='Pkgs 11 & 22'), 'Unknown', NULL, 'unknown', NULL, NULL, 'REPORTED', 'S056') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LT', 'Sole contractor', NULL::numeric, 'Larsen & Toubro Limited', 'REPORTED'::itis.confidence_level, 'S056')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0001', 'Vadodara–Virar Pkg 8', 'Jujuwa–Gandeva', NULL, NULL, NULL, 'REPORTED', 'S107');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0001' AND package_no='Vadodara–Virar Pkg 8'), 'Unknown', '2021-01-01', 'year', NULL, 'terminated', 'REPORTED', 'S107') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-RSIIL', 'Sole contractor', NULL::numeric, 'Roadway Solutions India Infra Ltd', 'REPORTED'::itis.confidence_level, 'S107')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0001', 'Vadodara–Virar Pkg 9', 'Karvad–Jujuwa', NULL, NULL, NULL, 'REPORTED', 'S108');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0001' AND package_no='Vadodara–Virar Pkg 9'), 'Unknown', '2021-01-01', 'year', NULL, 'terminated', 'REPORTED', 'S108') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-RSIIL', 'Sole contractor', NULL::numeric, 'Roadway Solutions India Infra Ltd', 'REPORTED'::itis.confidence_level, 'S108')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0001', 'Vadodara–Virar Pkg 10', 'Talsari–Karvad', NULL, NULL, NULL, 'REPORTED', 'S107');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0001' AND package_no='Vadodara–Virar Pkg 10'), 'Unknown', '2021-01-01', 'year', NULL, NULL, 'REPORTED', 'S107') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-RSIIL', 'Sole contractor', NULL::numeric, 'Roadway Solutions India Infra Ltd', 'REPORTED'::itis.confidence_level, 'S107')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0001', 'Jewar Airport link', '~30 km link from Noida International Airport to DME', 30, NULL, NULL, 'REPORTED', 'S101');
+WITH t AS (INSERT INTO tender_records (project_id, package_id, authority_id, title, tender_status, source_id) VALUES ('ITI-P-0001', (SELECT package_id FROM packages WHERE project_id='ITI-P-0001' AND package_no='Jewar Airport link'), 'A-NHAI', 'Delhi–Mumbai Expressway — Jewar Airport link', 'bid_evaluation', 'S101') RETURNING tender_id)
+INSERT INTO tender_bids (tender_id, bidder_label, lead_company_id, rank, source_id) SELECT tender_id, 'APCO Infratech Pvt Ltd', 'C-APCO', 1, 'S101' FROM t;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0001', 'Bandikui–Jaipur spur', '4-lane greenfield spur (HAM)', NULL, NULL, NULL, 'REPORTED', 'S104');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0001' AND package_no='Bandikui–Jaipur spur'), 'HAM', '2022-03-30', 'day', 1368, NULL, 'REPORTED', 'S104') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GRIL', 'Concessionaire', NULL::numeric, 'G R Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S104')) AS v;
 INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
   ('ITI-P-0001', 96547, 'sanctioned', 'Sanctioned cost', '2025-12-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S002'),
   ('ITI-P-0001', 77558, 'expenditure_to_date', 'Expenditure incurred to Dec-2025', '2025-12-01', 'month', false, NULL, NULL, 'REPORTED', 'S002');
 INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
   ('ITI-P-0001', '2025-12-01', 'month', 'opening', 'PARTIALLY_OPERATIONAL', '₹77,558 cr spent of ₹96,547 cr sanctioned; 929 km operational', 'REPORTED', 'S002'),
-  ('ITI-P-0001', '2026-01-01', 'year', 'milestone', NULL, 'Package-level delay: three Gujarat packages (Vadodara–Mumbai stretch) pushed to March 2028', 'REPORTED', 'S002');
+  ('ITI-P-0001', '2026-01-01', 'year', 'milestone', NULL, 'Package-level delay: three Gujarat packages (Vadodara–Mumbai stretch) pushed to March 2028', 'REPORTED', 'S002'),
+  ('ITI-P-0001', '2023-03-01', 'month', 'milestone', NULL, 'NHAI cancelled two RSIIL Vadodara–Virar packages for delays; fresh tenders floated', 'REPORTED', 'S107'),
+  ('ITI-P-0001', '2023-11-01', 'month', 'milestone', NULL, 'RSIIL again L1; packages re-awarded', 'REPORTED', 'S107'),
+  ('ITI-P-0001', '2025-12-19', 'day', 'milestone', NULL, 'Completion pushed to 2027–28 as delays hit Gujarat stretches', 'REPORTED', 'S109'),
+  ('ITI-P-0001', '2026-05-06', 'day', 'milestone', NULL, 'Vadodara–Virar Pkg 8 re-tender: nine bidders incl. RSIIL after earlier termination', 'REPORTED', 'S107'),
+  ('ITI-P-0001', '2026-05-28', 'day', 'milestone', NULL, 'Fresh bids invited for pending work on Pkg 9', 'REPORTED', 'S108');
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0001', '2026-01-01', 'year', NULL, '929 km of 1,445 km operationalised; Delhi–Vadodara 697 of 912 km operational (S002)', 'S002');
 INSERT INTO delay_risks (project_id, category, description, source_id) VALUES
-  ('ITI-P-0001', 'Other', 'Three Gujarat packages lag; cause not specified in captured source', 'S002');
+  ('ITI-P-0001', 'Other', 'Three Gujarat packages lag; cause not specified in captured source', 'S002'),
+  ('ITI-P-0001', 'Contractor performance', 'NHAI terminated RSIIL''s Vadodara–Virar Pkg 8 and Pkg 9 contracts for delays / slow progress', 'S108');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0001', 'schematic', ST_GeomFromText('LINESTRING(77.28 28.57, 77.07 28.25, 76.34 26.89, 76.35 26.02, 75.83 25.18, 75.04 23.33, 74.59 22.77, 73.18 22.31, 72.98 21.7, 72.81 19.46, 72.95 18.95)', 4326), 'APPROXIMATE', 'Town-to-town schematic through reported corridor cities', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0001', 'Tolling / ITS', 'potential', 'Access-controlled tolled expressway (characteristic, not documented here)'),
-  ('ITI-P-0001', 'Command & control / CCTV', 'potential', 'Long-length access-controlled corridor');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0001', 'Tolling / ITS', 'potential', 'Access-controlled tolled expressway (characteristic, not documented here)', NULL),
+  ('ITI-P-0001', 'Command & control / CCTV', 'potential', 'Long-length access-controlled corridor', NULL);
+INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
+  ('ITI-P-0001', 'RE_TENDER', 'Other', '2026-05-28', 'Vadodara–Virar Pkg 8 (nine bids, May-2026) and Pkg 9 (fresh bids invited 28 May 2026) back in procurement after RSIIL terminations', 'S108', '2026-09-28');
 
 -- ITI-P-0002 Mumbai–Nagpur Expressway (Samruddhi Mahamarg)
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -248,15 +463,55 @@ INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
   ('ITI-P-0002', 'Mumbai Nagpur Expressway', 'mumbai nagpur expressway');
 INSERT INTO project_states (project_id, state_code, is_primary) VALUES
   ('ITI-P-0002', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 1', 'Nagpur', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 1'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-MEIL', 'Sole contractor', NULL::numeric, 'Megha Engineering & Infrastructures Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 2', 'Wardha', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 2'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-AFCONS', 'Sole contractor', NULL::numeric, 'Afcons Infrastructure Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 3', 'Amravati', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 3'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-NCC', 'Sole contractor', NULL::numeric, 'NCC Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 4', 'Washim East', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 4'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PNC', 'Sole contractor', NULL::numeric, 'PNC Infratech Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 5', 'Washim West', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 5'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-SADBHAV', 'Sole contractor', NULL::numeric, 'Sadbhav Engineering Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 6', 'Buldana East', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 6'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-APCO', 'Sole contractor', NULL::numeric, 'APCO Infratech Pvt Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 7', 'Buldana West', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 7'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-RINFRA', 'Sole contractor', NULL::numeric, 'Reliance Infrastructure Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 8', 'Jalna', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 8'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-MONTE', 'Sole contractor', NULL::numeric, 'Montecarlo Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 9', 'Aurangabad East', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 9'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-MEIL', 'Sole contractor', NULL::numeric, 'Megha Engineering & Infrastructures Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 10', 'Aurangabad West', NULL, NULL, NULL, 'CROSS_VERIFIED', 'S057');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 10'), 'Unknown', '2018-09-01', 'month', 2095, 'completed', 'CROSS_VERIFIED', 'S057') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LT', 'Sole contractor', NULL::numeric, 'Larsen & Toubro Limited', 'CROSS_VERIFIED'::itis.confidence_level, 'S057')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 11', 'Ahmednagar', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 11'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GAYATRI', 'Sole contractor', NULL::numeric, 'Gayatri Projects Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 12', 'Nashik East', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 12'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-DBL', 'Sole contractor', NULL::numeric, 'Dilip Buildcon Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0002', 'Pkg 13', 'Nashik West', NULL, NULL, NULL, 'REPORTED', 'S092');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0002' AND package_no='Pkg 13'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S092') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-BSCPL', 'Sole contractor', NULL::numeric, 'BSCPL Infrastructure Ltd', 'REPORTED'::itis.confidence_level, 'S092')) AS v;
 INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
   ('ITI-P-0002', 55000, 'reported_cost', 'Reported project cost (approx.)', '2025-06-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S004');
 INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
-  ('ITI-P-0002', '2025-06-05', 'day', 'opening', 'OPERATIONAL', 'Final Igatpuri–Amane stretch inaugurated; full 701 km operational', 'REPORTED', 'S004');
+  ('ITI-P-0002', '2025-06-05', 'day', 'opening', 'OPERATIONAL', 'Final Igatpuri–Amane stretch inaugurated; full 701 km operational', 'REPORTED', 'S004'),
+  ('ITI-P-0002', '2018-09-04', 'day', 'award', 'AWARDED', 'Contracts awarded to 13 contractors for 13 of 16 packages', 'REPORTED', 'S093');
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0002', '2025-06-05', 'day', 100, 'Final Igatpuri–Amane 76 km opened 5 Jun 2025', 'S004');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0002', 'schematic', ST_GeomFromText('LINESTRING(79.09 21.15, 78.6 20.74, 77.13 20.11, 75.88 19.84, 75.34 19.88, 74.48 19.77, 73.56 19.7, 73.08 19.3)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0002', 'Tunnel systems (ventilation/SCADA/fire)', 'potential', 'Reported ~7.8 km road tunnel on corridor');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0002', 'Tunnel systems (ventilation/SCADA/fire)', 'potential', 'Reported ~7.8 km road tunnel on corridor', NULL);
 
 -- ITI-P-0003 Mumbai Trans Harbour Link (Atal Setu)
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -285,9 +540,9 @@ INSERT INTO project_events (project_id, event_date, date_precision, event_type, 
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0003', '2024-01-01', 'month', 100, 'Open to traffic since January 2024 (S006)', 'S006');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0003', 'schematic', ST_GeomFromText('LINESTRING(72.857 19, 72.93 18.97, 72.99 18.92)', 4326), 'APPROXIMATE', 'Landmark endpoints', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0003', 'Tolling / ITS', 'potential', 'Tolled sea bridge'),
-  ('ITI-P-0003', 'CCTV / surveillance', 'potential', 'Long marine structure');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0003', 'Tolling / ITS', 'potential', 'Tolled sea bridge', NULL),
+  ('ITI-P-0003', 'CCTV / surveillance', 'potential', 'Long marine structure', NULL);
 
 -- ITI-P-0004 Zojila Tunnel
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -315,8 +570,8 @@ INSERT INTO delay_risks (project_id, category, description, source_id) VALUES
   ('ITI-P-0004', 'Contractor financial stress', 'Original contractor IL&FS exited; project re-awarded in 2020', 'S009'),
   ('ITI-P-0004', 'Other', 'Delay and cost escalation reported; completion revised to 2028', 'S008');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0004', 'schematic', ST_GeomFromText('LINESTRING(75.41 34.25, 75.47 34.3, 75.53 34.33)', 4326), 'APPROXIMATE', 'Named portal localities', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0004', 'Tunnel management (ventilation/SCADA/fire/CCTV/comms)', 'potential', '13 km high-altitude road tunnel');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0004', 'Tunnel management (ventilation/SCADA/fire/CCTV/comms)', 'potential', '13 km high-altitude road tunnel', NULL);
 INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
   ('ITI-P-0004', 'CONSTRUCTION', 'Construction milestone', '2026-05-01', 'Excavation near complete (2026); tunnel E&M/systems phase would follow', 'S043', '2026-09-28');
 
@@ -346,8 +601,8 @@ INSERT INTO delay_risks (project_id, category, description, source_id) VALUES
   ('ITI-P-0005', 'Litigation', 'Arakkonam–Kancheepuram package under court case', 'S011'),
   ('ITI-P-0005', 'Contractor performance', 'Contractor performance problems cited', 'S011');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0005', 'schematic', ST_GeomFromText('LINESTRING(77.8 13.07, 78.18 12.99, 78.75 13.2, 79.67 13.08, 79.95 12.97)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0005', 'Tolling / ITS', 'potential', 'Access-controlled expressway');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0005', 'Tolling / ITS', 'potential', 'Access-controlled expressway', NULL);
 INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
   ('ITI-P-0005', 'CONSTRUCTION', 'Construction milestone', '2026-01-01', 'Remaining stretches under construction; litigated package pending', 'S011', '2026-09-28');
 
@@ -377,8 +632,8 @@ INSERT INTO project_events (project_id, event_date, date_precision, event_type, 
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0006', '2025-08-01', 'month', NULL, 'Northbound BWSL connector opened 26 Jan 2025 (S016); 24x7 operation from 15 Aug 2025 (search summary; needs primary confirmation)', 'S016');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0006', 'schematic', ST_GeomFromText('LINESTRING(72.822 18.945, 72.806 18.965, 72.81 18.982, 72.815 19.01)', 4326), 'APPROXIMATE', 'Landmark endpoints', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0006', 'Tunnel management / traffic control centre', 'potential', 'Urban twin tunnels on corridor (S014)');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0006', 'Tunnel management / traffic control centre', 'potential', 'Urban twin tunnels on corridor (S014)', NULL);
 
 -- ITI-P-0007 Ganga Expressway
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -391,19 +646,20 @@ INSERT INTO project_states (project_id, state_code, is_primary) VALUES
 INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0007', 'Group 1', 'Meerut–Badaun section', 129.7, NULL, NULL, 'REPORTED', 'S019');
 WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0007' AND package_no='Group 1'), 'Unknown', NULL, 'unknown', 5039, 'completed', 'REPORTED', 'S019') RETURNING contract_id)
 INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Sole contractor', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'REPORTED'::itis.confidence_level, 'S019')) AS v;
-INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0007', 'Groups 2–4', 'Badaun–Prayagraj (~80% of route)', NULL, NULL, NULL, 'REPORTED', 'S019');
-WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0007' AND package_no='Groups 2–4'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S019') RETURNING contract_id)
-INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-ADANI', 'Sole contractor', NULL::numeric, 'Adani Enterprises Ltd', 'REPORTED'::itis.confidence_level, 'S019')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0007', 'Groups 2–4', 'Budaun–Prayagraj (Groups 2–4)', 464, NULL, NULL, 'CROSS_VERIFIED', 'S019');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0007' AND package_no='Groups 2–4'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'CROSS_VERIFIED', 'S019') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-ADANI', 'Sole contractor', NULL::numeric, 'Adani Enterprises Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S019')) AS v;
 INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
   ('ITI-P-0007', 36230, 'reported_cost', 'Project cost', NULL, 'unknown', true, 'Most specific whole-project cost reported', '₹36,000 cr is a rounded headline figure; ₹36,230 cr is the project cost reported at award. Consistent, not conflicting.', 'REPORTED', 'S019'),
   ('ITI-P-0007', 36000, 'headline', 'Headline cost (''more than ₹36,000 cr'')', '2026-04-29', 'day', false, NULL, NULL, 'REPORTED', 'S018');
 INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0007', '2021-12-21', 'day', 'award', 'AWARDED', 'Adani Enterprises wins Ganga Expressway groups (Budaun–Prayagraj)', 'REPORTED', 'S126'),
   ('ITI-P-0007', '2026-04-29', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Inaugurated by PM at Hardoi; opened with tolling', 'REPORTED', 'S018');
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0007', '2026-04-29', 'day', NULL, 'Inaugurated 29 Apr 2026 at Hardoi; tolling began (S044)', 'S018');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0007', 'schematic', ST_GeomFromText('LINESTRING(77.71 28.98, 79.12 28.03, 79.91 27.88, 80.13 27.4, 80.49 26.55, 81.23 26.23, 81.95 25.52)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0007', 'Tolling / ATMS', 'potential', 'Tolled access-controlled expressway, newly operational');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0007', 'Tolling / ATMS', 'potential', 'Tolled access-controlled expressway, newly operational', NULL);
 
 -- ITI-P-0008 Sela Tunnel
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -423,8 +679,8 @@ INSERT INTO project_events (project_id, event_date, date_precision, event_type, 
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0008', '2024-03-09', 'day', 100, 'Dedicated to the nation 9 Mar 2024', 'S020');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0008', 'centroid', ST_GeomFromText('POINT(92.1 27.5)', 4326), 'APPROXIMATE', 'Sela Pass locality', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0008', 'Tunnel systems', 'potential', 'Road tunnel >1 km');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0008', 'Tunnel systems', 'potential', 'Road tunnel >1 km', NULL);
 
 -- ITI-P-0009 Dwarka Expressway
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -452,8 +708,8 @@ INSERT INTO project_events (project_id, event_date, date_precision, event_type, 
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0009', '2025-08-17', 'day', NULL, 'Haryana section opened 11 Mar 2024; Delhi section opened 17 Aug 2025', 'S046');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0009', 'schematic', ST_GeomFromText('LINESTRING(77.13 28.54, 77.06 28.55, 77.02 28.49, 76.98 28.4)', 4326), 'APPROXIMATE', 'Landmark endpoints', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0009', 'Urban tunnel systems / ATMS', 'potential', '5.1 km urban tunnel section (S022)');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0009', 'Urban tunnel systems / ATMS', 'potential', '5.1 km urban tunnel section (S022)', NULL);
 
 -- ITI-P-0010 Z-Morh (Sonamarg) Tunnel
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -476,8 +732,8 @@ INSERT INTO project_events (project_id, event_date, date_precision, event_type, 
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0010', '2025-01-13', 'day', 100, 'Inaugurated 13 Jan 2025', 'S026');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0010', 'schematic', ST_GeomFromText('LINESTRING(75.2 34.29, 75.29 34.3)', 4326), 'APPROXIMATE', 'Named portal localities', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0010', 'Tunnel systems', 'potential', '6.5 km road tunnel');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0010', 'Tunnel systems', 'potential', '6.5 km road tunnel', NULL);
 
 -- ITI-P-0011 Thane–Borivali Twin Tube Road Tunnel
 INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
@@ -502,9 +758,9 @@ INSERT INTO project_events (project_id, event_date, date_precision, event_type, 
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0011', '2025-08-01', 'month', 8, '>8% progress as of Aug 2025; TBM-03 factory acceptance completed 29 May 2026 (S029)', 'S029');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0011', 'schematic', ST_GeomFromText('LINESTRING(72.975 19.235, 72.92 19.232, 72.865 19.23)', 4326), 'APPROXIMATE', 'Endpoint localities', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0011', 'Tunnel management (ventilation/SCADA/fire/CCTV/comms)', 'potential', '11.8 km urban twin-tube road tunnel'),
-  ('ITI-P-0011', 'Control room / data centre', 'potential', 'Urban tunnel O&M');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0011', 'Tunnel management (ventilation/SCADA/fire/CCTV/comms)', 'potential', '11.8 km urban twin-tube road tunnel', NULL),
+  ('ITI-P-0011', 'Control room / data centre', 'potential', 'Urban tunnel O&M', NULL);
 INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
   ('ITI-P-0011', 'CONSTRUCTION', 'Construction milestone', '2026-05-29', 'TBM boring phase starting; E&M/systems packages would follow civil works', 'S029', '2026-09-28');
 
@@ -556,13 +812,14 @@ INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
   ('ITI-P-0013', 'Atal Tunnel', 'atal tunnel');
 INSERT INTO project_states (project_id, state_code, is_primary) VALUES
   ('ITI-P-0013', 'IN-HP', true);
-INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0013', 'Main', 'Atal Tunnel', 9.02, NULL, NULL, 'REPORTED', 'S033');
-WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0013' AND package_no='Main'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S033') RETURNING contract_id)
-INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-STRABAG', 'JV member', NULL::numeric, 'STRABAG', 'REPORTED'::itis.confidence_level, 'S033'), ('C-AFCONS', 'JV member', NULL::numeric, 'Afcons Infrastructure Ltd', 'REPORTED'::itis.confidence_level, 'S033')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0013', 'Main', 'Atal Tunnel', 9.02, NULL, NULL, 'CROSS_VERIFIED', 'S033');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0013' AND package_no='Main'), 'Unknown', '2009-09-01', 'month', NULL, 'completed', 'CROSS_VERIFIED', 'S033') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-STRABAG', 'JV member', NULL::numeric, 'STRABAG', 'CROSS_VERIFIED'::itis.confidence_level, 'S033'), ('C-AFCONS', 'JV member', NULL::numeric, 'Afcons Infrastructure Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S033')) AS v;
 INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
   ('ITI-P-0013', 3200, 'reported_cost', 'Reported cost', NULL, 'unknown', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S033');
 INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
   ('ITI-P-0013', '2010-06-28', 'day', 'status_change', 'UNDER_CONSTRUCTION', 'Construction commenced', 'REPORTED', 'S033'),
+  ('ITI-P-0013', '2009-09-01', 'month', 'award', 'AWARDED', 'Tunnel contract awarded to Afcons–STRABAG JV', 'REPORTED', 'S087'),
   ('ITI-P-0013', '2020-10-03', 'day', 'opening', 'OPERATIONAL', 'Inaugurated by PM', 'REPORTED', 'S034');
 INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_pct, note, source_id) VALUES
   ('ITI-P-0013', '2020-10-03', 'day', 100, 'Inaugurated 3 Oct 2020', 'S034');
@@ -583,6 +840,9 @@ INSERT INTO project_states (project_id, state_code, is_primary) VALUES
   ('ITI-P-0014', 'IN-HR', false),
   ('ITI-P-0014', 'IN-PB', true),
   ('ITI-P-0014', 'IN-JK', false);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0014', 'Pkg 17', 'J&K section', 28.92, NULL, NULL, 'REPORTED', 'S100');
+WITH t AS (INSERT INTO tender_records (project_id, package_id, authority_id, title, tender_status, source_id) VALUES ('ITI-P-0014', (SELECT package_id FROM packages WHERE project_id='ITI-P-0014' AND package_no='Pkg 17'), 'A-NHAI', 'Delhi–Amritsar–Katra Expressway — Pkg 17', 'bid_evaluation', 'S100') RETURNING tender_id)
+INSERT INTO tender_bids (tender_id, bidder_label, lead_company_id, rank, source_id) SELECT tender_id, 'APCO Infratech Pvt Ltd', 'C-APCO', 1, 'S100' FROM t;
 INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
   ('ITI-P-0014', 39500, 'reported_cost', 'Announced project cost (2022)', '2022-01-01', 'year', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S035');
 INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
@@ -595,8 +855,8 @@ INSERT INTO delay_risks (project_id, category, description, source_id) VALUES
   ('ITI-P-0014', 'Land acquisition', 'Land acquisition hurdles in Punjab; spur tender cancelled', 'S036'),
   ('ITI-P-0014', 'Weather', 'Monsoon flooding in J&K sector cited', 'S037');
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0014', 'schematic', ST_GeomFromText('LINESTRING(76.92 28.69, 76.31 29.32, 76.4 29.8, 75.84 30.25, 75.47 31.13, 75.4 32.04, 75.52 32.37, 74.93 32.99)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
-INSERT INTO technology_requirements (project_id, domain, kind, basis) VALUES
-  ('ITI-P-0014', 'Tolling / ITS', 'potential', 'Access-controlled expressway');
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0014', 'Tolling / ITS', 'potential', 'Access-controlled expressway', NULL);
 INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
   ('ITI-P-0014', 'RE_TENDER', 'Tender cancellation', '2026-01-01', 'Amritsar-spur section tender cancelled over land; returns to procurement only once land is acquired', 'S036', '2026-09-28');
 
@@ -612,7 +872,7 @@ INSERT INTO project_states (project_id, state_code, is_primary) VALUES
   ('ITI-P-0015', 'IN-GA', false);
 INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
   ('ITI-P-0015', 86300, 'estimated', 'Estimated project cost', NULL, 'unknown', false, NULL, 'Multiple publicly reported values exist; value requires further verification. ₹20,787 cr appears to be an allocation/budget line (incl. land), not the total project cost.', 'REPORTED', 'S038'),
-  ('ITI-P-0015', 20787, 'budget_allocation', 'Budget (of which ₹12,000 cr for land acquisition)', NULL, 'unknown', false, NULL, NULL, 'REPORTED', 'S038');
+  ('ITI-P-0015', 20787, 'land_acquisition', 'Budget (of which ₹12,000 cr for land acquisition)', NULL, 'unknown', false, NULL, NULL, 'REPORTED', 'S038');
 INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
   ('ITI-P-0015', '2022-10-01', 'month', 'tender', 'TENDER_ISSUED', 'EPC tenders reported launched by MSRDC (tier 4 claim — needs primary verification)', 'REPORTED', 'S038'),
   ('ITI-P-0015', '2025-06-24', 'day', 'approval', 'APPROVED', 'Approved by Maharashtra Cabinet', 'REPORTED', 'S038'),
@@ -640,4 +900,807 @@ INSERT INTO project_updates (project_id, as_of_date, as_of_precision, physical_p
 INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0016', 'centroid', ST_GeomFromText('POINT(72.66 19.93)', 4326), 'APPROXIMATE', 'Vadhavan port locality only; alignment unknown', true);
 INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
   ('ITI-P-0016', 'TENDER_EXPECTED', 'Cabinet approval', '2025-08-05', 'State cabinet approval 5 Aug 2025. Procurement timing not documented.', 'S041', '2026-09-28');
+
+-- ITI-P-0017 Krishnagiri–Walajahpet (NH-46)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0017', 'Krishnagiri–Walajahpet (NH-46)', 'National Highway', 'BOT toll road (concession)', 'CR-KRISHNAGIRI-WALAJAHPET-NH-46', NULL, 'NHDP Phase V', 'Krishnagiri', 'Walajahpet', NULL, '', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0017', 'Krishnagiri–Walajahpet (NH-46)', 'krishnagiri walajahpet nh 46');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0017', 'IN-TN', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0017', 'Concession', 'Krishnagiri–Walajahpet (NH-46)', NULL, NULL, NULL, 'REPORTED', 'S050');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0017' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S050') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S050')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0017', 1370, 'reported_cost', 'Project cost (INR 13.70 bn)', '2017-01-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S050');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0017', '2017-01-11', 'day', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S050');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0017', 'schematic', ST_GeomFromText('LINESTRING(78.21 12.52, 79.13 12.92, 79.37 12.92)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0018 Panipat Elevated Corridor
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0018', 'Panipat Elevated Corridor', 'Elevated corridor', 'Elevated corridor (BOT)', 'CR-PANIPAT-ELEVATED-CORRIDOR', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0018', 'Panipat Elevated Corridor', 'panipat elevated corridor');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0018', 'IN-HR', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0018', 'Concession', 'Panipat Elevated Corridor', NULL, NULL, NULL, 'REPORTED', 'S050');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0018' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S050') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S050')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0018', '2017-01-11', 'day', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S050');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0018', 'centroid', ST_GeomFromText('POINT(76.97 29.39)', 4326), 'APPROXIMATE', 'Panipat city centroid', false);
+
+-- ITI-P-0019 Samakhiali–Gandhidham
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0019', 'Samakhiali–Gandhidham', 'National Highway', 'BOT toll road (concession)', 'CR-SAMAKHIALI-GANDHIDHAM', NULL, NULL, 'Samakhiali', 'Gandhidham', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0019', 'Samakhiali–Gandhidham', 'samakhiali gandhidham');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0019', 'IN-GJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0019', 'Concession', 'Samakhiali–Gandhidham', NULL, NULL, NULL, 'REPORTED', 'S050');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0019' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S050') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S050')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0019', '2017-01-11', 'day', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S050');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0019', 'schematic', ST_GeomFromText('LINESTRING(70.51 23.3, 70.13 23.08)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0020 Beawar–Pali–Pindwara
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0020', 'Beawar–Pali–Pindwara', 'National Highway', 'BOT toll road (concession)', 'CR-BEAWAR-PALI-PINDWARA', NULL, NULL, 'Beawar', 'Pindwara', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0020', 'Beawar–Pali–Pindwara', 'beawar pali pindwara');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0020', 'IN-RJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0020', 'Concession', 'Beawar–Pali–Pindwara', NULL, NULL, NULL, 'REPORTED', 'S050');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0020' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S050') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S050')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0020', '2017-01-11', 'day', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S050');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0020', 'schematic', ST_GeomFromText('LINESTRING(74.32 26.1, 73.32 25.77, 73.06 24.79)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0021 Palanpur–Swaroopganj
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0021', 'Palanpur–Swaroopganj', 'National Highway', 'BOT toll road (concession)', 'CR-PALANPUR-SWAROOPGANJ', NULL, NULL, 'Palanpur', 'Swaroopganj', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0021', 'Palanpur–Swaroopganj', 'palanpur swaroopganj');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0021', 'IN-GJ', true),
+  ('ITI-P-0021', 'IN-RJ', false);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0021', 'Concession', 'Palanpur–Swaroopganj', NULL, NULL, NULL, 'REPORTED', 'S050');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0021' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S050') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S050')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0021', '2017-01-11', 'day', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S050');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0021', 'schematic', ST_GeomFromText('LINESTRING(72.43 24.17, 73.03 24.68)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0022 Pimpalgaon–Nashik–Gonde
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0022', 'Pimpalgaon–Nashik–Gonde', 'National Highway', 'BOT toll road (concession)', 'CR-PIMPALGAON-NASHIK-GONDE', NULL, NULL, 'Pimpalgaon', 'Gonde', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0022', 'Pimpalgaon–Nashik–Gonde', 'pimpalgaon nashik gonde');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0022', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0022', 'Concession', 'Pimpalgaon–Nashik–Gonde', NULL, NULL, NULL, 'REPORTED', 'S050');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0022' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S050') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S050')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0022', '2017-01-11', 'day', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S050');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0022', 'schematic', ST_GeomFromText('LINESTRING(73.99 20.17, 73.79 20, 73.63 19.78)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0023 Rajkot–Jamnagar–Vadinar
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0023', 'Rajkot–Jamnagar–Vadinar', 'National Highway', 'BOT toll road (concession)', 'CR-RAJKOT-JAMNAGAR-VADINAR', NULL, NULL, 'Rajkot', 'Vadinar', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0023', 'Rajkot–Jamnagar–Vadinar', 'rajkot jamnagar vadinar');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0023', 'IN-GJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0023', 'Concession', 'Rajkot–Jamnagar–Vadinar', NULL, NULL, NULL, 'REPORTED', 'S052');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0023' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S052') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S052')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0023', NULL, 'unknown', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S052');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0023', 'schematic', ST_GeomFromText('LINESTRING(70.8 22.3, 70.06 22.47, 69.7 22.46)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0024 Vadodara–Bharuch
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0024', 'Vadodara–Bharuch', 'National Highway', 'BOT toll road (concession)', 'CR-VADODARA-BHARUCH', NULL, NULL, 'Vadodara', 'Bharuch', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0024', 'Vadodara–Bharuch', 'vadodara bharuch');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0024', 'IN-GJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0024', 'Concession', 'Vadodara–Bharuch', NULL, NULL, NULL, 'REPORTED', 'S051');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0024' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S051') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S051')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0024', NULL, 'unknown', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S051');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0024', 'schematic', ST_GeomFromText('LINESTRING(73.18 22.31, 72.98 21.7)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0025 Coimbatore Bypass
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0025', 'Coimbatore Bypass', 'Bypass', 'Bypass (BOT)', 'CR-COIMBATORE-BYPASS', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0025', 'Coimbatore Bypass', 'coimbatore bypass');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0025', 'IN-TN', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0025', 'Concession', 'Coimbatore Bypass', NULL, NULL, NULL, 'REPORTED', 'S053');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0025' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S053') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S053')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0025', NULL, 'unknown', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S053');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0025', 'centroid', ST_GeomFromText('POINT(76.96 11)', 4326), 'APPROXIMATE', 'Coimbatore city centroid', false);
+
+-- ITI-P-0026 Chennai–Tada
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0026', 'Chennai–Tada', 'National Highway', 'BOT toll road (concession)', 'CR-CHENNAI-TADA', NULL, NULL, 'Chennai', 'Tada', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0026', 'Chennai–Tada', 'chennai tada');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0026', 'IN-TN', true),
+  ('ITI-P-0026', 'IN-AP', false);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0026', 'Concession', 'Chennai–Tada', NULL, NULL, NULL, 'REPORTED', 'S054');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0026' AND package_no='Concession'), 'BOT-Toll', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S054') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LTIDPL', 'Concessionaire', NULL::numeric, 'L&T Infrastructure Development Projects Ltd', 'REPORTED'::itis.confidence_level, 'S054')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0026', NULL, 'unknown', 'opening', 'OPERATIONAL', 'Listed as an operational L&T IDPL road project', 'REPORTED', 'S054');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0026', 'schematic', ST_GeomFromText('LINESTRING(80.27 13.08, 80.05 13.59)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0027 Atal Setu (Goa) — Mandovi cable-stayed bridge
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0027', 'Atal Setu (Goa) — Mandovi cable-stayed bridge', 'Bridge', 'Cable-stayed bridge', 'CR-ATAL-SETU-GOA-MANDOVI-CABLE-STAYED-BRIDGE', NULL, NULL, NULL, NULL, 3.2, '3.2 km (S059)', NULL, NULL, NULL, NULL, NULL, 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0027', 'Atal Setu (Goa) — Mandovi cable-stayed bridge', 'atal setu goa mandovi cable stayed bridge'),
+  ('ITI-P-0027', 'Atal Setu Goa', 'atal setu goa'),
+  ('ITI-P-0027', 'New Mandovi Bridge', 'new mandovi bridge');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0027', 'IN-GA', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0027', 'EPC', 'Cable-stayed bridge', 3.2, NULL, NULL, 'CROSS_VERIFIED', 'S058');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0027' AND package_no='EPC'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'CROSS_VERIFIED', 'S058') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LT', 'JV member', NULL::numeric, 'Larsen & Toubro Limited', 'CROSS_VERIFIED'::itis.confidence_level, 'S058'), ('C-DSI', 'Specialist contractor', NULL::numeric, 'DSI-Bridgecon', 'CROSS_VERIFIED'::itis.confidence_level, 'S058')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0027', '2014-07-27', 'day', 'status_change', 'UNDER_CONSTRUCTION', 'Construction started', 'REPORTED', 'S058'),
+  ('ITI-P-0027', '2019-01-27', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Bridge inaugurated', 'REPORTED', 'S059');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0027', 'centroid', ST_GeomFromText('POINT(73.83 15.5)', 4326), 'APPROXIMATE', 'Panaji (Mandovi crossing) — approximate', false);
+
+-- ITI-P-0028 Nivedita Setu (Second Vivekananda Bridge)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0028', 'Nivedita Setu (Second Vivekananda Bridge)', 'Bridge', 'River bridge (Hooghly)', 'CR-NIVEDITA-SETU-SECOND-VIVEKANANDA-BRIDGE', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0028', 'Nivedita Setu (Second Vivekananda Bridge)', 'nivedita setu second vivekananda bridge'),
+  ('ITI-P-0028', 'Second Vivekananda Setu', 'second vivekananda setu'),
+  ('ITI-P-0028', 'Nivedita Setu', 'nivedita setu');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0028', 'IN-WB', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0028', 'EPC', 'Bridge', NULL, NULL, NULL, 'REPORTED', 'S061');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0028' AND package_no='EPC'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S061') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LT', 'Sole contractor', NULL::numeric, 'Larsen & Toubro Limited', 'REPORTED'::itis.confidence_level, 'S061')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0028', '2004-04-01', 'month', 'status_change', 'UNDER_CONSTRUCTION', 'Construction started', 'REPORTED', 'S061'),
+  ('ITI-P-0028', '2007-07-01', 'month', 'opening', 'OPEN_TO_TRAFFIC', 'Opened to traffic', 'REPORTED', 'S061');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0028', 'centroid', ST_GeomFromText('POINT(88.35 22.65)', 4326), 'APPROXIMATE', 'Dakshineswar, Kolkata — approximate', false);
+
+-- ITI-P-0029 Second Ishwar Gupta Setu
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0029', 'Second Ishwar Gupta Setu', 'Bridge', 'River bridge (Hooghly)', 'CR-SECOND-ISHWAR-GUPTA-SETU', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0029', 'Second Ishwar Gupta Setu', 'second ishwar gupta setu');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0029', 'IN-WB', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0029', 'EPC', 'Bridge', NULL, NULL, NULL, 'REPORTED', 'S062');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0029' AND package_no='EPC'), 'Unknown', '2018-01-01', 'year', NULL, NULL, 'REPORTED', 'S062') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LT', 'Sole contractor', NULL::numeric, 'Larsen & Toubro Limited', 'REPORTED'::itis.confidence_level, 'S062')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0029', '2018-01-01', 'year', 'status_change', 'UNDER_CONSTRUCTION', 'Construction by L&T started', 'REPORTED', 'S062');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0029', 'centroid', ST_GeomFromText('POINT(88.43 22.97)', 4326), 'APPROXIMATE', 'Kalyani–Bansberia crossing — approximate', false);
+
+-- ITI-P-0030 Kacchi Dargah–Bidupur Ganga Bridge
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0030', 'Kacchi Dargah–Bidupur Ganga Bridge', 'Bridge', 'Extra-dosed cable-stayed river bridge', 'CR-KACCHI-DARGAH-BIDUPUR-GANGA-BRIDGE', NULL, NULL, 'Kacchi Dargah (Patna)', 'Bidupur (Vaishali)', 19.76, '19.76 km greenfield project incl. 9.75 km bridge (S084)', NULL, NULL, NULL, NULL, 'A-BSRDC', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0030', 'Kacchi Dargah–Bidupur Ganga Bridge', 'kacchi dargah bidupur ganga bridge'),
+  ('ITI-P-0030', 'Kachchi Dargah–Bidupur bridge', 'kachchi dargah bidupur bridge');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0030', 'IN-BR', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0030', 'EPC', '6-lane extra-dosed bridge', 9.75, NULL, NULL, 'CROSS_VERIFIED', 'S084');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0030' AND package_no='EPC'), 'Unknown', '2017-01-01', 'year', NULL, 'active', 'CROSS_VERIFIED', 'S084') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LT', 'JV member', NULL::numeric, 'Larsen & Toubro Limited', 'CROSS_VERIFIED'::itis.confidence_level, 'S084'), ('C-DAEWOO', 'JV member', NULL::numeric, 'Daewoo Engineering & Construction', 'CROSS_VERIFIED'::itis.confidence_level, 'S084')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0030', 4988, 'reported_cost', 'Project cost', NULL, 'unknown', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S084');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0030', '2017-07-01', 'month', 'status_change', 'UNDER_CONSTRUCTION', 'Construction started', 'REPORTED', 'S084'),
+  ('ITI-P-0030', NULL, 'unknown', 'opening', 'PARTIALLY_OPERATIONAL', 'Patna–Raghopur stretch inaugurated by CM on 23 June (year not captured in source summary)', 'REPORTED', 'S085');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0030', 'schematic', ST_GeomFromText('LINESTRING(85.28 25.58, 85.31 25.62, 85.33 25.65)', 4326), 'APPROXIMATE', 'Endpoint localities — approximate', false);
+
+-- ITI-P-0031 Agra–Lucknow Expressway
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0031', 'Agra–Lucknow Expressway', 'Expressway', 'Greenfield access-controlled expressway', 'CR-AGRA-LUCKNOW-EXPRESSWAY', NULL, NULL, 'Agra', 'Lucknow', 302, '302 km (S091)', NULL, NULL, NULL, NULL, 'A-UPEIDA', 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0031', 'Agra–Lucknow Expressway', 'agra lucknow expressway');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0031', 'IN-UP', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0031', 'Pkg 1', 'Agra–Firozabad', 56, NULL, NULL, 'REPORTED', 'S090');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0031' AND package_no='Pkg 1'), 'Unknown', '2014-08-01', 'month', NULL, 'completed', 'REPORTED', 'S090') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PNC', 'Sole contractor', NULL::numeric, 'PNC Infratech Ltd', 'REPORTED'::itis.confidence_level, 'S090')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0031', 'Pkg 2', 'Firozabad–Etawah', 62, NULL, NULL, 'CROSS_VERIFIED', 'S090');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0031' AND package_no='Pkg 2'), 'Unknown', '2014-08-01', 'month', NULL, 'completed', 'CROSS_VERIFIED', 'S090') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-AFCONS', 'Sole contractor', NULL::numeric, 'Afcons Infrastructure Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S090')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0031', 'Pkg 3', 'Etawah–Kannauj', 57, NULL, NULL, 'REPORTED', 'S090');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0031' AND package_no='Pkg 3'), 'Unknown', '2014-08-01', 'month', NULL, 'completed', 'REPORTED', 'S090') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-NCC', 'Sole contractor', NULL::numeric, 'NCC Ltd', 'REPORTED'::itis.confidence_level, 'S090')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0031', 'Pkg 4', 'Kannauj–Unnao', 64, NULL, NULL, 'CROSS_VERIFIED', 'S090');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0031' AND package_no='Pkg 4'), 'Unknown', '2014-08-01', 'month', NULL, 'completed', 'CROSS_VERIFIED', 'S090') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-AFCONS', 'Sole contractor', NULL::numeric, 'Afcons Infrastructure Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S090')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0031', 'Pkg 5', 'Unnao–Lucknow', 63, NULL, NULL, 'REPORTED', 'S090');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0031' AND package_no='Pkg 5'), 'Unknown', '2014-08-01', 'month', NULL, 'completed', 'REPORTED', 'S090') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LT', 'Sole contractor', NULL::numeric, 'Larsen & Toubro Limited', 'REPORTED'::itis.confidence_level, 'S090')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0031', 15000, 'estimated', 'Estimated cost (''nearly ₹15,000 cr'')', '2014-08-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S090');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0031', '2014-08-13', 'day', 'award', 'AWARDED', 'UP selects developers for five packages', 'REPORTED', 'S090'),
+  ('ITI-P-0031', '2016-11-21', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Expressway inaugurated', 'REPORTED', 'S125');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0031', 'schematic', ST_GeomFromText('LINESTRING(78.01 27.18, 78.4 27.15, 79.02 26.78, 79.92 27.05, 80.49 26.55, 80.95 26.85)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0032 Bandra–Worli Sea Link
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0032', 'Bandra–Worli Sea Link', 'Bridge', 'Cable-stayed sea bridge', 'CR-BANDRA-WORLI-SEA-LINK', NULL, NULL, 'Bandra', 'Worli', 5.6, '5.6 km (S063)', NULL, NULL, NULL, NULL, 'A-MSRDC', 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0032', 'Bandra–Worli Sea Link', 'bandra worli sea link'),
+  ('ITI-P-0032', 'Rajiv Gandhi Sea Link', 'rajiv gandhi sea link'),
+  ('ITI-P-0032', 'BWSL', 'bwsl');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0032', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0032', 'EPC', 'Sea link', 5.6, NULL, NULL, 'CROSS_VERIFIED', 'S064');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0032' AND package_no='EPC'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'CROSS_VERIFIED', 'S064') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-HCC', 'Sole contractor', NULL::numeric, 'Hindustan Construction Company Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S064')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0032', 600, 'reported_cost', 'Original estimate', NULL, 'unknown', false, NULL, '₹600 cr original estimate vs ₹1,634 cr final cost — cost overrun, not a conflict (S063, S065 ''6-fold to ₹1,600 cr'').', 'REPORTED', 'S063'),
+  ('ITI-P-0032', 1634, 'reported_cost', 'Final cost', '2010-01-01', 'year', true, 'Most specific whole-project cost reported', NULL, 'CROSS_VERIFIED', 'S063');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0032', '1999-01-01', 'year', 'status_change', 'UNDER_CONSTRUCTION', 'Construction began', 'REPORTED', 'S067'),
+  ('ITI-P-0032', '2009-06-30', 'day', 'opening', 'PARTIALLY_OPERATIONAL', 'First four of eight lanes opened', 'REPORTED', 'S063'),
+  ('ITI-P-0032', '2010-01-01', 'year', 'completion', 'COMPLETED', 'Fully completed', 'REPORTED', 'S063');
+INSERT INTO delay_risks (project_id, category, description, source_id) VALUES
+  ('ITI-P-0032', 'Environmental clearance', '10-year build with delays from environmental clearances and shifting design parameters', 'S063');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0032', 'schematic', ST_GeomFromText('LINESTRING(72.818 19.045, 72.812 19.03, 72.815 19.018)', 4326), 'APPROXIMATE', 'Landmark endpoints', false);
+
+-- ITI-P-0033 Versova–Bandra Sea Link
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0033', 'Versova–Bandra Sea Link', 'Bridge', 'Sea link', 'CR-VERSOVA-BANDRA-SEA-LINK', NULL, NULL, 'Versova', 'Bandra', 17.7, '17.7 km (S116)', NULL, NULL, NULL, NULL, 'A-MSRDC', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0033', 'Versova–Bandra Sea Link', 'versova bandra sea link'),
+  ('ITI-P-0033', 'VBSL', 'vbsl'),
+  ('ITI-P-0033', 'Bandra–Versova Sea Link', 'bandra versova sea link');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0033', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0033', 'EPC', 'Sea link', 17.7, NULL, NULL, 'REPORTED', 'S115');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0033' AND package_no='EPC'), 'Unknown', '2018-01-01', 'year', NULL, 'active', 'REPORTED', 'S115') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-WEBUILD', 'JV member', NULL::numeric, 'Webuild S.p.A.', 'REPORTED'::itis.confidence_level, 'S115'), ('C-APCO', 'JV member', NULL::numeric, 'APCO Infratech Pvt Ltd', 'REPORTED'::itis.confidence_level, 'S115')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0033', 6993.99, 'reported_cost', 'Original consortium bid', '2018-01-01', 'year', false, NULL, 'Three values are successive revisions (bid → 2018 revision → 2024 revision). Latest is reference.', 'REPORTED', 'S114'),
+  ('ITI-P-0033', 11332.8, 'revised', 'Revised cost (2018)', '2018-01-01', 'year', false, NULL, NULL, 'REPORTED', 'S114'),
+  ('ITI-P-0033', 18120.96, 'revised', 'Revised cost (2024)', '2024-01-01', 'year', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S116');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0033', '2018-01-01', 'year', 'award', 'AWARDED', 'EPC awarded to Astaldi–Reliance Infrastructure JV', 'REPORTED', 'S113'),
+  ('ITI-P-0033', '2022-01-01', 'month', 'milestone', NULL, 'Reliance Infrastructure exits JV; stake to APCO Infratech', 'REPORTED', 'S115'),
+  ('ITI-P-0033', '2024-01-01', 'year', 'milestone', NULL, 'Cost revised to ₹18,120.96 cr', 'REPORTED', 'S116'),
+  ('ITI-P-0033', '2026-01-01', 'year', 'delay', 'DELAYED', 'Construction completion revised to May 2028', 'REPORTED', 'S116');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0033', 'schematic', ST_GeomFromText('LINESTRING(72.812 19.135, 72.815 19.09, 72.818 19.05)', 4326), 'APPROXIMATE', 'Coastal schematic between localities', false);
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0033', 'Tolling / ITS / surveillance', 'potential', 'Tolled urban sea link', NULL);
+INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
+  ('ITI-P-0033', 'CONSTRUCTION', 'Construction milestone', '2026-01-01', 'Civil works under way to May-2028; systems packages would follow', 'S116', '2026-09-28');
+
+-- ITI-P-0034 Mumbai–Pune Expressway
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0034', 'Mumbai–Pune Expressway', 'Expressway', 'Access-controlled expressway', 'CR-MUMBAI-PUNE-EXPRESSWAY', NULL, NULL, 'Mumbai (Kalamboli)', 'Pune (Kiwale)', NULL, '', NULL, NULL, NULL, NULL, 'A-MSRDC', 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0034', 'Mumbai–Pune Expressway', 'mumbai pune expressway'),
+  ('ITI-P-0034', 'Yashwantrao Chavan Expressway', 'yashwantrao chavan expressway'),
+  ('ITI-P-0034', 'MPEW', 'mpew');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0034', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0034', 'Construction (section)', 'Section of the expressway', NULL, NULL, NULL, 'REPORTED', 'S067');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0034' AND package_no='Construction (section)'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S067') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-HCC', 'Sole contractor', NULL::numeric, 'Hindustan Construction Company Ltd', 'REPORTED'::itis.confidence_level, 'S067')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0034', 'TOT concession', 'Mumbai–Pune Expressway + old NH-48 (TOT)', NULL, NULL, NULL, 'VERIFIED', 'S068');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0034' AND package_no='TOT concession'), 'TOT', '2020-02-01', 'month', 8262, 'active', 'VERIFIED', 'S068') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Concessionaire', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'VERIFIED'::itis.confidence_level, 'S068')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0034', 8262, 'other', 'TOT upfront + staggered concession payment by IRB to MSRDC (not construction cost)', '2020-02-01', 'month', false, NULL, NULL, 'VERIFIED', 'S068');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0034', '2002-01-01', 'year', 'opening', 'OPERATIONAL', 'Expressway completed (HCC section)', 'REPORTED', 'S066'),
+  ('ITI-P-0034', '2020-02-01', 'month', 'award', 'AWARDED', 'TOT concession awarded to IRB by MSRDC', 'REPORTED', 'S068');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0034', 'schematic', ST_GeomFromText('LINESTRING(73.1 19.03, 73.28 18.83, 73.41 18.75, 73.73 18.66)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0035 Hyderabad Outer Ring Road (TOT)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0035', 'Hyderabad Outer Ring Road (TOT)', 'Ring road', 'Ring road — TOT concession', 'CR-HYDERABAD-OUTER-RING-ROAD-TOT', NULL, NULL, NULL, NULL, 158, '158 km (S069)', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0035', 'Hyderabad Outer Ring Road (TOT)', 'hyderabad outer ring road tot'),
+  ('ITI-P-0035', 'Hyderabad ORR', 'hyderabad orr');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0035', 'IN-TG', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0035', 'TOT concession', '158 km, 30-year revenue-linked concession', 158, NULL, NULL, 'VERIFIED', 'S069');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0035' AND package_no='TOT concession'), 'TOT', NULL, 'unknown', 7380, 'active', 'VERIFIED', 'S069') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Concessionaire', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'VERIFIED'::itis.confidence_level, 'S069')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0035', 7380, 'other', 'TOT upfront payment (not construction cost)', NULL, 'unknown', false, NULL, NULL, 'VERIFIED', 'S069');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0035', NULL, 'unknown', 'award', 'AWARDED', 'TOT concession awarded to IRB (award date not captured)', 'REPORTED', 'S069');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0035', 'centroid', ST_GeomFromText('POINT(78.49 17.39)', 4326), 'APPROXIMATE', 'Hyderabad centroid — ring alignment not ingested', false);
+
+-- ITI-P-0036 Surat–Dahisar (NH-8)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0036', 'Surat–Dahisar (NH-8)', 'National Highway', 'BOT toll road', 'CR-SURAT-DAHISAR-NH-8', NULL, NULL, 'Surat', 'Dahisar', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0036', 'Surat–Dahisar (NH-8)', 'surat dahisar nh 8');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0036', 'IN-GJ', true),
+  ('ITI-P-0036', 'IN-MH', false);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0036', 'BOT concession', 'Surat–Dahisar (NH-8)', NULL, NULL, NULL, 'REPORTED', 'S069');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0036' AND package_no='BOT concession'), 'BOT-Toll', '2009-01-01', 'year', NULL, NULL, 'REPORTED', 'S069') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Concessionaire', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'REPORTED'::itis.confidence_level, 'S069')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0036', '2009-01-01', 'year', 'award', 'AWARDED', 'Won by IRB (per IRB milestones)', 'REPORTED', 'S069');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0036', 'schematic', ST_GeomFromText('LINESTRING(72.83 21.17, 72.9 20.37, 72.86 19.25)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0037 Jaipur–Deoli
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0037', 'Jaipur–Deoli', 'National Highway', 'BOT toll road', 'CR-JAIPUR-DEOLI', NULL, NULL, 'Jaipur', 'Deoli', NULL, '', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0037', 'Jaipur–Deoli', 'jaipur deoli');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0037', 'IN-RJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0037', 'BOT concession', 'Jaipur–Deoli', NULL, NULL, NULL, 'REPORTED', 'S069');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0037' AND package_no='BOT concession'), 'BOT-Toll', '2009-01-01', 'year', NULL, NULL, 'REPORTED', 'S069') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Concessionaire', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'REPORTED'::itis.confidence_level, 'S069')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0037', '2009-01-01', 'year', 'award', 'AWARDED', 'Won by IRB (per IRB milestones)', 'REPORTED', 'S069');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0037', 'schematic', ST_GeomFromText('LINESTRING(75.79 26.91, 75.79 26.17, 75.38 25.76)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0038 Talegaon–Amravati
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0038', 'Talegaon–Amravati', 'National Highway', 'BOT toll road', 'CR-TALEGAON-AMRAVATI', NULL, NULL, 'Talegaon', 'Amravati', NULL, '', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0038', 'Talegaon–Amravati', 'talegaon amravati');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0038', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0038', 'BOT concession', 'Talegaon–Amravati', NULL, NULL, NULL, 'REPORTED', 'S069');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0038' AND package_no='BOT concession'), 'BOT-Toll', '2009-01-01', 'year', NULL, NULL, 'REPORTED', 'S069') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Concessionaire', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'REPORTED'::itis.confidence_level, 'S069')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0038', '2009-01-01', 'year', 'award', 'AWARDED', 'Won by IRB (per IRB milestones)', 'REPORTED', 'S069');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0038', 'centroid', ST_GeomFromText('POINT(77.75 20.93)', 4326), 'APPROXIMATE', 'Amravati centroid — alignment not ingested', false);
+
+-- ITI-P-0039 Pathankot–Amritsar (NH-15)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0039', 'Pathankot–Amritsar (NH-15)', 'National Highway', 'BOT toll road', 'CR-PATHANKOT-AMRITSAR-NH-15', NULL, NULL, 'Pathankot', 'Amritsar', 102.42, '102.42 km (S070)', NULL, NULL, NULL, NULL, 'A-NHAI', 'VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0039', 'Pathankot–Amritsar (NH-15)', 'pathankot amritsar nh 15');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0039', 'IN-PB', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0039', 'BOT concession', '102.42 km, 20-year concession from 2010', 102.42, NULL, NULL, 'VERIFIED', 'S070');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0039' AND package_no='BOT concession'), 'BOT-Toll', '2009-01-01', 'year', NULL, 'completed', 'VERIFIED', 'S070') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Concessionaire', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'VERIFIED'::itis.confidence_level, 'S070')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0039', '2009-01-01', 'year', 'award', 'AWARDED', 'Won by IRB', 'REPORTED', 'S069'),
+  ('ITI-P-0039', '2017-09-29', 'day', 'milestone', NULL, 'Asset set to transfer to IRB InvIT Fund', 'REPORTED', 'S070');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0039', 'schematic', ST_GeomFromText('LINESTRING(75.65 32.27, 75.4 32.04, 74.87 31.63)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0040 Ahmedabad–Vadodara (NH-8 six-laning + Expressway)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0040', 'Ahmedabad–Vadodara (NH-8 six-laning + Expressway)', 'National Highway', 'DBFOT toll concession', 'CR-AHMEDABAD-VADODARA-NH-8-SIX-LANING-EXPRESSWAY', NULL, NULL, 'Ahmedabad', 'Vadodara', 195.6, '102.3 km NH-8 six-laning + 93.302 km expressway improvement (S071)', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0040', 'Ahmedabad–Vadodara (NH-8 six-laning + Expressway)', 'ahmedabad vadodara nh 8 six laning expressway');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0040', 'IN-GJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0040', 'DBFOT concession', 'NH-8 six-laning + expressway', 195.6, NULL, NULL, 'VERIFIED', 'S071');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0040' AND package_no='DBFOT concession'), 'DBFOT', '2011-07-01', 'month', NULL, 'active', 'VERIFIED', 'S071') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-IRB', 'Concessionaire', NULL::numeric, 'IRB Infrastructure Developers Ltd', 'VERIFIED'::itis.confidence_level, 'S071')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0040', '2011-07-01', 'month', 'award', 'AWARDED', 'Concession agreement signed — NHAI''s first ''ultra mega'' BOT project', 'REPORTED', 'S069');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0040', 'schematic', ST_GeomFromText('LINESTRING(72.57 23.02, 72.86 22.69, 73.18 22.31)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0041 Dhola–Sadiya Bridge (Bhupen Hazarika Setu)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0041', 'Dhola–Sadiya Bridge (Bhupen Hazarika Setu)', 'Bridge', 'River bridge (Brahmaputra/Lohit)', 'CR-DHOLA-SADIYA-BRIDGE-BHUPEN-HAZARIKA-SETU', NULL, NULL, 'Dhola', 'Sadiya', 9.15, '9.15 km (S077)', NULL, NULL, NULL, NULL, NULL, 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0041', 'Dhola–Sadiya Bridge (Bhupen Hazarika Setu)', 'dhola sadiya bridge bhupen hazarika setu'),
+  ('ITI-P-0041', 'Bhupen Hazarika Setu', 'bhupen hazarika setu'),
+  ('ITI-P-0041', 'Dhola Sadiya Bridge', 'dhola sadiya bridge');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0041', 'IN-AS', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0041', 'EPC', 'Bridge', 9.15, NULL, NULL, 'REPORTED', 'S076');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0041' AND package_no='EPC'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S076') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-NECL', 'Sole contractor', NULL::numeric, 'Navayuga Engineering Company Ltd', 'REPORTED'::itis.confidence_level, 'S076')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0041', '2017-01-01', 'year', 'opening', 'OPEN_TO_TRAFFIC', 'Inaugurated by the Prime Minister', 'REPORTED', 'S077');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0041', 'schematic', ST_GeomFromText('LINESTRING(95.47 27.73, 95.6 27.8)', 4326), 'APPROXIMATE', 'Village endpoints — approximate', false);
+
+-- ITI-P-0042 Silkyara Bend–Barkot Tunnel
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0042', 'Silkyara Bend–Barkot Tunnel', 'Tunnel', 'Mountain road tunnel (Char Dham)', 'CR-SILKYARA-BEND-BARKOT-TUNNEL', NULL, 'Char Dham Mahamarg Vikas Pariyojana', NULL, NULL, 4.53, '4.53 km (S123)', NULL, NULL, NULL, NULL, 'A-NHIDCL', 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0042', 'Silkyara Bend–Barkot Tunnel', 'silkyara bend barkot tunnel'),
+  ('ITI-P-0042', 'Silkyara tunnel', 'silkyara tunnel'),
+  ('ITI-P-0042', 'Baba Baukhnag tunnel', 'baba baukhnag tunnel');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0042', 'IN-UK', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0042', 'EPC', '4.5 km bi-directional tunnel', 4.53, NULL, NULL, 'CROSS_VERIFIED', 'S076');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0042' AND package_no='EPC'), 'Unknown', NULL, 'unknown', 853.8, 'active', 'CROSS_VERIFIED', 'S076') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-NECL', 'Sole contractor', NULL::numeric, 'Navayuga Engineering Company Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S076')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0042', 853.8, 'reported_cost', 'Construction cost', '2023-12-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S076');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0042', '2023-11-01', 'month', 'status_change', 'STALLED', 'Tunnel collapse trapped 41 workers; works halted during rescue', 'REPORTED', 'S076'),
+  ('ITI-P-0042', '2025-04-16', 'day', 'milestone', NULL, 'Milestone: excavation breakthrough of 4.53 km tunnel', 'REPORTED', 'S123');
+INSERT INTO delay_risks (project_id, category, description, source_id) VALUES
+  ('ITI-P-0042', 'Geological conditions', 'Nov-2023 collapse during construction trapped 41 workers', 'S076');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0042', 'schematic', ST_GeomFromText('LINESTRING(78.39 30.8, 78.21 30.81)', 4326), 'APPROXIMATE', 'Portal localities — approximate', false);
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0042', 'Tunnel systems (ventilation/SCADA/fire/CCTV)', 'potential', '4.5 km road tunnel entering final phase', NULL);
+INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
+  ('ITI-P-0042', 'CONSTRUCTION', 'Construction milestone', '2025-04-16', 'Excavation complete Apr-2025; final phase / commissioning ahead', 'S123', '2026-09-28');
+
+-- ITI-P-0043 Banihal–Qazigund Road Tunnel
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0043', 'Banihal–Qazigund Road Tunnel', 'Tunnel', 'Twin-tube highway tunnel', 'CR-BANIHAL-QAZIGUND-ROAD-TUNNEL', 'NH-44 (old NH-1A)', NULL, NULL, NULL, 16.3, '16.3 km 4-lane section incl. 8.5 km twin-tube tunnel (S078)', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0043', 'Banihal–Qazigund Road Tunnel', 'banihal qazigund road tunnel'),
+  ('ITI-P-0043', 'Navyug Tunnel', 'navyug tunnel'),
+  ('ITI-P-0043', 'Quazigund–Banihal tunnel', 'quazigund banihal tunnel');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0043', 'IN-JK', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0043', 'Concession / EPC', 'Qazigund–Banihal section of NH-1A', 16.3, NULL, NULL, 'REPORTED', 'S078');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0043' AND package_no='Concession / EPC'), 'Unknown', '2010-04-30', 'day', NULL, 'completed', 'REPORTED', 'S078') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-NECL', 'Consortium member', NULL::numeric, 'Navayuga Engineering Company Ltd', 'REPORTED'::itis.confidence_level, 'S078'), ('C-KPCL', 'Consortium member', NULL::numeric, 'KPCL (as named in source)', 'REPORTED'::itis.confidence_level, 'S078')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0043', 2100, 'reported_cost', 'Tunnel cost', '2021-08-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S078');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0043', '2010-04-30', 'day', 'award', 'AWARDED', 'Letter of award to NECL–KPCL consortium', 'REPORTED', 'S078'),
+  ('ITI-P-0043', '2011-06-01', 'month', 'status_change', 'UNDER_CONSTRUCTION', 'Works started', 'REPORTED', 'S078'),
+  ('ITI-P-0043', '2021-08-04', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Tunnel opened', 'REPORTED', 'S078');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0043', 'schematic', ST_GeomFromText('LINESTRING(75.16 33.59, 75.18 33.5, 75.19 33.43)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0044 Chenani–Nashri Tunnel (Dr Syama Prasad Mookerjee Tunnel)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0044', 'Chenani–Nashri Tunnel (Dr Syama Prasad Mookerjee Tunnel)', 'Tunnel', 'Highway tunnel', 'CR-CHENANI-NASHRI-TUNNEL-DR-SYAMA-PRASAD-MOOKERJEE-TUNNEL', NULL, NULL, NULL, NULL, 9.28, '9.28 km (S080)', NULL, NULL, NULL, NULL, 'A-NHAI', 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0044', 'Chenani–Nashri Tunnel (Dr Syama Prasad Mookerjee Tunnel)', 'chenani nashri tunnel dr syama prasad mookerjee tunnel'),
+  ('ITI-P-0044', 'Chenani Nashri tunnel', 'chenani nashri tunnel'),
+  ('ITI-P-0044', 'Patnitop tunnel', 'patnitop tunnel');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0044', 'IN-JK', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0044', 'Concession', 'Tunnel concession', 9.28, NULL, NULL, 'REPORTED', 'S080');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0044' AND package_no='Concession'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S080') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-ILFS', 'Concessionaire', NULL::numeric, 'IL&FS (infrastructure arm)', 'REPORTED'::itis.confidence_level, 'S080')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0044', 'Design & execution', 'EPC sub-contract from ITNL', 9.28, NULL, NULL, 'REPORTED', 'S080');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0044' AND package_no='Design & execution'), 'Subcontract', '2010-01-01', 'year', NULL, 'completed', 'REPORTED', 'S080') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-LEIGHTON', 'Subcontractor', NULL::numeric, 'Leighton India', 'REPORTED'::itis.confidence_level, 'S080')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0044', 2500, 'reported_cost', 'Reported cost', '2017-04-01', 'month', false, NULL, 'Multiple publicly reported values exist; ₹2,500 cr appears to be the original estimate and ₹3,700 cr the escalated cost — requires primary verification.', 'REPORTED', 'S080'),
+  ('ITI-P-0044', 3700, 'reported_cost', 'Escalated total cost (from ~₹2,500 cr estimate)', NULL, 'unknown', false, NULL, NULL, 'REPORTED', 'S081');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0044', '2010-01-01', 'year', 'award', 'AWARDED', 'ITNL contracted Leighton India for design & execution', 'REPORTED', 'S080'),
+  ('ITI-P-0044', '2017-04-02', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Tunnel inaugurated', 'REPORTED', 'S080');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0044', 'schematic', ST_GeomFromText('LINESTRING(75.28 33.03, 75.25 33.13)', 4326), 'APPROXIMATE', 'Portal localities — approximate', false);
+INSERT INTO technology_requirements (project_id, domain, kind, basis, source_id) VALUES
+  ('ITI-P-0044', 'Integrated tunnel control system', 'documented', 'Fully integrated tunnel control system — first of its kind in India', 'S080');
+
+-- ITI-P-0045 Purvanchal Expressway
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0045', 'Purvanchal Expressway', 'Expressway', 'Greenfield access-controlled expressway', 'CR-PURVANCHAL-EXPRESSWAY', NULL, NULL, 'Chand Saray (Lucknow)', 'Haydaria (Ghazipur)', 340.824, '340.824 km per UPEIDA (S127); 8 packages sum to 340.7 km (S094); ''354 km'' also reported in S094', NULL, NULL, NULL, NULL, 'A-UPEIDA', 'VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0045', 'Purvanchal Expressway', 'purvanchal expressway');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0045', 'IN-UP', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 1', 'Chand Saray–Sansara', 40.4, NULL, NULL, 'REPORTED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 1'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GAYATRI', 'Sole contractor', NULL::numeric, 'Gayatri Projects Ltd', 'REPORTED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 2', 'Sansara–Jarai Kalan', 39.7, NULL, NULL, 'REPORTED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 2'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GAYATRI', 'Sole contractor', NULL::numeric, 'Gayatri Projects Ltd', 'REPORTED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 3', 'Jarai Kalan–Siddhi Ganeshpur', 41.7, NULL, NULL, 'CROSS_VERIFIED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 3'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'CROSS_VERIFIED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-APCO', 'Sole contractor', NULL::numeric, 'APCO Infratech Pvt Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 4', 'Siddhi Ganeshpur–Sansarpur', 42.7, NULL, NULL, 'REPORTED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 4'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GRIL', 'Sole contractor', NULL::numeric, 'G R Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 5', 'Sansarpur–Govindpur', 54, NULL, NULL, 'CROSS_VERIFIED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 5'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'CROSS_VERIFIED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PNC', 'Sole contractor', NULL::numeric, 'PNC Infratech Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 6', 'Govindpur–Mojrapur', 28.2, NULL, NULL, 'CROSS_VERIFIED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 6'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'CROSS_VERIFIED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PNC', 'Sole contractor', NULL::numeric, 'PNC Infratech Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 7', 'Mojrapur–Bijaura', 46, NULL, NULL, 'REPORTED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 7'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GRIL', 'Sole contractor', NULL::numeric, 'G R Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0045', 'Pkg 8', 'Bijaura–Haydaria', 48, NULL, NULL, 'REPORTED', 'S094');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0045' AND package_no='Pkg 8'), 'Unknown', '2018-01-01', 'year', NULL, 'completed', 'REPORTED', 'S094') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-OSE', 'Sole contractor', NULL::numeric, 'Oriental Structural Engineers Pvt Ltd', 'REPORTED'::itis.confidence_level, 'S094')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0045', 23000, 'headline', 'Headline project value (''₹23,000-cr'')', NULL, 'unknown', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S094');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0045', '2018-10-10', 'day', 'status_change', 'UNDER_CONSTRUCTION', 'Construction started', 'REPORTED', 'S119'),
+  ('ITI-P-0045', '2021-11-16', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Inaugurated by the Prime Minister', 'REPORTED', 'S095');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0045', 'schematic', ST_GeomFromText('LINESTRING(81.05 26.78, 82.07 26.26, 83.18 26.07, 83.57 25.58)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0046 Bundelkhand Expressway
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0046', 'Bundelkhand Expressway', 'Expressway', 'Greenfield access-controlled expressway', 'CR-BUNDELKHAND-EXPRESSWAY', NULL, NULL, 'Gonda (Chitrakoot)', 'Kudrail (Etawah)', 296.1, 'Sum of 6 packages = 296.1 km (computed from S096)', NULL, NULL, NULL, NULL, 'A-UPEIDA', 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0046', 'Bundelkhand Expressway', 'bundelkhand expressway');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0046', 'IN-UP', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0046', 'Pkg 1', 'Gonda (Chitrakoot)–Mahokhar (Banda)', 50.5, NULL, NULL, 'CROSS_VERIFIED', 'S096');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0046' AND package_no='Pkg 1'), 'Unknown', '2019-11-01', 'month', NULL, 'completed', 'CROSS_VERIFIED', 'S096') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-APCO', 'Sole contractor', NULL::numeric, 'APCO Infratech Pvt Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S096')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0046', 'Pkg 2', 'Mahokhar (Banda)–Kaohari (Mahoba)', 50.3, NULL, NULL, 'CROSS_VERIFIED', 'S096');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0046' AND package_no='Pkg 2'), 'Unknown', '2019-11-01', 'month', NULL, 'completed', 'CROSS_VERIFIED', 'S096') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-APCO', 'Sole contractor', NULL::numeric, 'APCO Infratech Pvt Ltd', 'CROSS_VERIFIED'::itis.confidence_level, 'S096')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0046', 'Pkg 3', 'Kaohari (Mahoba)–Baroli Kharka (Hamirpur)', 49, NULL, NULL, 'REPORTED', 'S096');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0046' AND package_no='Pkg 3'), 'Unknown', '2019-11-01', 'month', NULL, 'completed', 'REPORTED', 'S096') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-ASHOKA', 'Sole contractor', NULL::numeric, 'Ashoka Buildcon Ltd', 'REPORTED'::itis.confidence_level, 'S096')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0046', 'Pkg 4', 'Baroli Kharka (Hamirpur)–Salabad (Jalaun)', 51, NULL, NULL, 'REPORTED', 'S096');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0046' AND package_no='Pkg 4'), 'Unknown', '2019-11-01', 'month', NULL, 'completed', 'REPORTED', 'S096') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GAWAR', 'Sole contractor', NULL::numeric, 'Gawar Construction Ltd', 'REPORTED'::itis.confidence_level, 'S096')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0046', 'Pkg 5', 'Salabad (Jalaun)–Bakhariya (Auraiya)', 50, NULL, NULL, 'REPORTED', 'S096');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0046' AND package_no='Pkg 5'), 'Unknown', '2019-11-01', 'month', NULL, 'completed', 'REPORTED', 'S096') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GAWAR', 'Sole contractor', NULL::numeric, 'Gawar Construction Ltd', 'REPORTED'::itis.confidence_level, 'S096')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0046', 'Pkg 6', 'Bakhariya (Auraiya)–Kudrail (Etawah)', 45.3, NULL, NULL, 'REPORTED', 'S096');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0046' AND package_no='Pkg 6'), 'Unknown', '2019-11-01', 'month', NULL, 'completed', 'REPORTED', 'S096') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-DBL', 'Sole contractor', NULL::numeric, 'Dilip Buildcon Ltd', 'REPORTED'::itis.confidence_level, 'S096')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0046', 7786.81, 'reported_cost', 'Construction cost', '2019-11-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S097'),
+  ('ITI-P-0046', 2202.38, 'land_acquisition', 'Land acquisition cost', '2019-11-01', 'month', false, NULL, NULL, 'REPORTED', 'S097');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0046', '2019-11-01', 'month', 'award', 'AWARDED', 'UP Cabinet approved contractors for six packages', 'REPORTED', 'S097'),
+  ('ITI-P-0046', '2022-07-16', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Inaugurated by the Prime Minister', 'REPORTED', 'S120');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0046', 'schematic', ST_GeomFromText('LINESTRING(80.9 25.2, 80.33 25.48, 79.87 25.29, 80.15 25.95, 79.33 26.14, 79.02 26.78)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0047 Gorakhpur Link Expressway
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0047', 'Gorakhpur Link Expressway', 'Expressway', 'Greenfield access-controlled expressway', 'CR-GORAKHPUR-LINK-EXPRESSWAY', NULL, NULL, 'Jaitpur (Gorakhpur)', 'Salarpur (Azamgarh) — Purvanchal Expressway', 91.35, '91.35 km (S103)', NULL, NULL, NULL, NULL, 'A-UPEIDA', 'CROSS_VERIFIED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0047', 'Gorakhpur Link Expressway', 'gorakhpur link expressway');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0047', 'IN-UP', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0047', 'Jaitpur–Phulwaria', 'Jaitpur–Phulwaria section', 48.317, NULL, NULL, 'REPORTED', 'S121');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0047' AND package_no='Jaitpur–Phulwaria'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S121') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-APCO', 'Sole contractor', NULL::numeric, 'APCO Infratech Pvt Ltd', 'REPORTED'::itis.confidence_level, 'S121')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0047', 7283.28, 'reported_cost', 'Project cost', '2025-06-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S103');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0047', '2025-06-20', 'day', 'opening', 'OPEN_TO_TRAFFIC', 'Inaugurated by the Chief Minister', 'REPORTED', 'S103');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0047', 'schematic', ST_GeomFromText('LINESTRING(83.37 26.76, 83.25 26.4, 83.18 26.07)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0048 Awadh Expressway (Lucknow–Kanpur)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0048', 'Awadh Expressway (Lucknow–Kanpur)', 'Expressway', 'Access-controlled expressway (HAM)', 'CR-AWADH-EXPRESSWAY-LUCKNOW-KANPUR', 'NE-6', NULL, 'Lucknow', 'Kanpur', 63, '63 km (S099)', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0048', 'Awadh Expressway (Lucknow–Kanpur)', 'awadh expressway lucknow kanpur'),
+  ('ITI-P-0048', 'Lucknow–Kanpur Expressway', 'lucknow kanpur expressway'),
+  ('ITI-P-0048', 'NE-6', 'ne 6');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0048', 'IN-UP', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0048', 'Pkg 1', 'HAM package 1', NULL, NULL, NULL, 'REPORTED', 'S099');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0048' AND package_no='Pkg 1'), 'HAM', '2022-02-01', 'month', NULL, 'completed', 'REPORTED', 'S099') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PNC', 'Concessionaire', NULL::numeric, 'PNC Infratech Ltd', 'REPORTED'::itis.confidence_level, 'S099')) AS v;
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0048', 'Pkg 2', 'HAM package 2', NULL, NULL, NULL, 'REPORTED', 'S099');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0048' AND package_no='Pkg 2'), 'HAM', '2022-02-01', 'month', NULL, 'completed', 'REPORTED', 'S099') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PNC', 'Concessionaire', NULL::numeric, 'PNC Infratech Ltd', 'REPORTED'::itis.confidence_level, 'S099')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0048', 4700, 'reported_cost', 'Project cost (approx.)', NULL, 'unknown', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S099');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0048', '2022-02-01', 'month', 'tender', 'BID_EVALUATION', 'PNC Infratech L1 for both HAM packages', 'REPORTED', 'S099'),
+  ('ITI-P-0048', '2026-07-13', 'day', 'opening', 'OPERATIONAL', 'Expressway operational (tier-4 source — verify)', 'REPORTED', 'S099');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0048', 'schematic', ST_GeomFromText('LINESTRING(80.95 26.85, 80.62 26.62, 80.33 26.45)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0049 Jammu–Udhampur four-laning (NH-1A)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0049', 'Jammu–Udhampur four-laning (NH-1A)', 'National Highway', 'Hill highway four-laning', 'CR-JAMMU-UDHAMPUR-FOUR-LANING-NH-1A', NULL, NULL, 'Jammu', 'Udhampur', NULL, '', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0049', 'Jammu–Udhampur four-laning (NH-1A)', 'jammu udhampur four laning nh 1a');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0049', 'IN-JK', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0049', 'EPC', 'Four-laning', NULL, NULL, NULL, 'REPORTED', 'S089');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0049' AND package_no='EPC'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S089') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-AFCONS', 'Sole contractor', NULL::numeric, 'Afcons Infrastructure Ltd', 'REPORTED'::itis.confidence_level, 'S089')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0049', NULL, 'unknown', 'completion', 'COMPLETED', 'Completed ahead of schedule (date not captured)', 'REPORTED', 'S089');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0049', 'schematic', ST_GeomFromText('LINESTRING(74.86 32.73, 75.14 32.93)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0050 Badakumari–Karki (NH-130CD, Raipur–Visakhapatnam EC)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0050', 'Badakumari–Karki (NH-130CD, Raipur–Visakhapatnam EC)', 'National Highway', 'HAM road project', 'CR-BADAKUMARI-KARKI-NH-130CD-RAIPUR-VISAKHAPATNAM-EC', NULL, 'Raipur–Visakhapatnam Economic Corridor', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0050', 'Badakumari–Karki (NH-130CD, Raipur–Visakhapatnam EC)', 'badakumari karki nh 130cd raipur visakhapatnam ec');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0050', 'IN-OD', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0050', 'HAM', 'Six-lane section', NULL, NULL, NULL, 'REPORTED', 'S072');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0050' AND package_no='HAM'), 'HAM', '2021-04-01', 'month', 1169.1, NULL, 'REPORTED', 'S072') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-ARTL', 'Concessionaire', NULL::numeric, 'Adani Road Transport Ltd', 'REPORTED'::itis.confidence_level, 'S072')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0050', 1169.1, 'reported_cost', 'Bid project cost', '2021-04-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S072');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0050', '2021-04-02', 'day', 'award', 'LOA_ISSUED', 'LoA to Adani Road Transport; 2-year construction period', 'REPORTED', 'S072');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0050', 'centroid', ST_GeomFromText('POINT(84.4 20.5)', 4326), 'APPROXIMATE', 'Odisha state centroid — package location not captured', false);
+
+-- ITI-P-0051 Suryapet–Khammam (NH-365BB)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0051', 'Suryapet–Khammam (NH-365BB)', 'National Highway', 'HAM road project', 'CR-SURYAPET-KHAMMAM-NH-365BB', NULL, 'Bharatmala Pariyojana', NULL, NULL, 58.626, '58.626 km (S073)', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0051', 'Suryapet–Khammam (NH-365BB)', 'suryapet khammam nh 365bb');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0051', 'IN-TG', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0051', 'HAM', 'Four-laning', 58.626, NULL, NULL, 'REPORTED', 'S073');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0051' AND package_no='HAM'), 'HAM', '2019-03-01', 'month', NULL, NULL, 'REPORTED', 'S073') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-ARTL', 'Concessionaire', NULL::numeric, 'Adani Road Transport Ltd', 'REPORTED'::itis.confidence_level, 'S073')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0051', '2019-03-12', 'day', 'award', 'LOA_ISSUED', 'LoA received', 'REPORTED', 'S073');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0051', 'schematic', ST_GeomFromText('LINESTRING(79.62 17.14, 80.15 17.25)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0052 Mancherial–Repallewada (NH-363)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0052', 'Mancherial–Repallewada (NH-363)', 'National Highway', 'HAM road project', 'CR-MANCHERIAL-REPALLEWADA-NH-363', NULL, 'NHDP Phase IV', NULL, NULL, 42, '42 km (S073)', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0052', 'Mancherial–Repallewada (NH-363)', 'mancherial repallewada nh 363');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0052', 'IN-TG', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0052', 'HAM', 'Four-laning', 42, NULL, NULL, 'REPORTED', 'S073');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0052' AND package_no='HAM'), 'HAM', '2019-03-01', 'month', NULL, NULL, 'REPORTED', 'S073') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-ARTL', 'Concessionaire', NULL::numeric, 'Adani Road Transport Ltd', 'REPORTED'::itis.confidence_level, 'S073')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0052', '2019-03-12', 'day', 'award', 'LOA_ISSUED', 'LoA received', 'REPORTED', 'S073');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0052', 'centroid', ST_GeomFromText('POINT(79.44 18.87)', 4326), 'APPROXIMATE', 'Mancherial centroid — alignment not ingested', false);
+
+-- ITI-P-0053 Chennai Peripheral Ring Road — Phase 1 (Northern Port Access Road)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0053', 'Chennai Peripheral Ring Road — Phase 1 (Northern Port Access Road)', 'Ring road', 'Ring road / port access', 'CR-CHENNAI-PERIPHERAL-RING-ROAD-PHASE-1-NORTHERN-PORT-ACCESS-ROAD', NULL, NULL, 'Ennore Port', 'Thatchur', 25.38, '25.38 km (S082)', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0053', 'Chennai Peripheral Ring Road — Phase 1 (Northern Port Access Road)', 'chennai peripheral ring road phase 1 northern port access road'),
+  ('ITI-P-0053', 'Chennai PRR Phase 1', 'chennai prr phase 1');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0053', 'IN-TN', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0053', 'Phase 1', 'Six-lane road incl. Buckingham Canal bridge', 25.38, NULL, NULL, 'REPORTED', 'S082');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0053' AND package_no='Phase 1'), 'Unknown', '2021-09-01', 'month', 2100, NULL, 'REPORTED', 'S082') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-TPL', 'Sole contractor', NULL::numeric, 'Tata Projects Limited', 'REPORTED'::itis.confidence_level, 'S082')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0053', 2100, 'reported_cost', 'Order value (approx.)', '2021-09-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S082');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0053', '2021-09-27', 'day', 'award', 'AWARDED', 'Order won by Tata Projects', 'REPORTED', 'S082');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0053', 'schematic', ST_GeomFromText('LINESTRING(80.32 13.23, 80.24 13.3, 80.18 13.38)', 4326), 'APPROXIMATE', 'Endpoint localities — approximate', false);
+
+-- ITI-P-0054 Thane Elevated Road (Anand Nagar–Saket, EEH)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0054', 'Thane Elevated Road (Anand Nagar–Saket, EEH)', 'Elevated corridor', 'Urban elevated road', 'CR-THANE-ELEVATED-ROAD-ANAND-NAGAR-SAKET-EEH', NULL, NULL, 'Anand Nagar', 'Saket', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0054', 'Thane Elevated Road (Anand Nagar–Saket, EEH)', 'thane elevated road anand nagar saket eeh');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0054', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0054', 'D&C', 'Elevated road on Eastern Express Highway', NULL, NULL, NULL, 'REPORTED', 'S110');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0054' AND package_no='D&C'), 'Unknown', '2024-10-01', 'month', 1847.72, NULL, 'REPORTED', 'S110') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-JKUMAR', 'Sole contractor', NULL::numeric, 'J. Kumar Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S110')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0054', 1847.72, 'award', 'Contract value', '2024-10-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S110');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0054', '2024-10-03', 'day', 'award', 'LOA_ISSUED', 'LoA received by J Kumar Infraprojects', 'REPORTED', 'S110');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0054', 'centroid', ST_GeomFromText('POINT(72.97 19.2)', 4326), 'APPROXIMATE', 'Thane (Eastern Express Highway) — approximate', false);
+INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
+  ('ITI-P-0054', 'RECENTLY_AWARDED', 'Other', '2024-10-03', 'Elevated urban road LoA Oct-2024 — construction-phase procurement window', 'S110', '2026-09-28');
+
+-- ITI-P-0055 Eastern Freeway — Panjarpole to Chembur–Mankhurd Link Road section
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0055', 'Eastern Freeway — Panjarpole to Chembur–Mankhurd Link Road section', 'Urban road', 'Urban freeway section', 'CR-EASTERN-FREEWAY-PANJARPOLE-TO-CHEMBUR-MANKHURD-LINK-ROAD-SECTION', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0055', 'Eastern Freeway — Panjarpole to Chembur–Mankhurd Link Road section', 'eastern freeway panjarpole to chembur mankhurd link road section');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0055', 'IN-MH', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0055', 'Section', 'Panjarpole–CMLR', NULL, NULL, NULL, 'REPORTED', 'S111');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0055' AND package_no='Section'), 'Unknown', NULL, 'unknown', NULL, 'completed', 'REPORTED', 'S111') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-JKUMAR', 'Sole contractor', NULL::numeric, 'J. Kumar Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S111')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0055', NULL, 'unknown', 'completion', 'COMPLETED', 'Listed in J Kumar executed works', 'REPORTED', 'S111');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0055', 'centroid', ST_GeomFromText('POINT(72.92 19.05)', 4326), 'APPROXIMATE', 'Chembur — approximate', false);
+
+-- ITI-P-0056 East–West Corridor (Assam) — Patel Engineering section
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0056', 'East–West Corridor (Assam) — Patel Engineering section', 'National Highway', 'Highway section', 'CR-EAST-WEST-CORRIDOR-ASSAM-PATEL-ENGINEERING-SECTION', NULL, NULL, NULL, NULL, 25, '25 km (S112)', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0056', 'East–West Corridor (Assam) — Patel Engineering section', 'east west corridor assam patel engineering section');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0056', 'IN-AS', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0056', 'Section', '25 km East–West Corridor section', 25, NULL, NULL, 'REPORTED', 'S112');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0056' AND package_no='Section'), 'Unknown', NULL, 'unknown', 238.73, 'completed', 'REPORTED', 'S112') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PATEL', 'Sole contractor', NULL::numeric, 'Patel Engineering Ltd', 'REPORTED'::itis.confidence_level, 'S112')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0056', 238.73, 'award', 'Contract cost (Rs 2,387.25 million)', NULL, 'unknown', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S112');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0056', NULL, 'unknown', 'completion', 'COMPLETED', 'Constructed by Patel Engineering', 'REPORTED', 'S112');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0056', 'centroid', ST_GeomFromText('POINT(92.9 26.2)', 4326), 'APPROXIMATE', 'Assam state centroid — section location not captured', false);
+
+-- ITI-P-0057 Surat–Manor Tollway
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0057', 'Surat–Manor Tollway', 'National Highway', 'Toll road', 'CR-SURAT-MANOR-TOLLWAY', NULL, NULL, 'Surat', 'Manor', 38, '38 km (S112)', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0057', 'Surat–Manor Tollway', 'surat manor tollway');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0057', 'IN-GJ', true),
+  ('ITI-P-0057', 'IN-MH', false);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0057', 'Tollway', '38 km tollway works', 38, NULL, NULL, 'REPORTED', 'S112');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0057' AND package_no='Tollway'), 'Unknown', NULL, 'unknown', 255, 'completed', 'REPORTED', 'S112') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PATEL', 'Sole contractor', NULL::numeric, 'Patel Engineering Ltd', 'REPORTED'::itis.confidence_level, 'S112')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0057', 255, 'reported_cost', 'Project cost (Rs 2,550 million)', NULL, 'unknown', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S112');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0057', NULL, 'unknown', 'completion', 'COMPLETED', 'Constructed by Patel Engineering', 'REPORTED', 'S112');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0057', 'centroid', ST_GeomFromText('POINT(72.83 21.17)', 4326), 'APPROXIMATE', 'Location along Surat–Manor corridor not captured — Surat reference point', false);
+
+-- ITI-P-0058 Varanasi–Shaktinagar Road four-laning (SH-5A)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0058', 'Varanasi–Shaktinagar Road four-laning (SH-5A)', 'State Highway', 'State highway four-laning', 'CR-VARANASI-SHAKTINAGAR-ROAD-FOUR-LANING-SH-5A', 'SH-5A', NULL, 'Varanasi', 'Shaktinagar', NULL, '', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0058', 'Varanasi–Shaktinagar Road four-laning (SH-5A)', 'varanasi shaktinagar road four laning sh 5a');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0058', 'IN-UP', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0058', 'EPC', 'Four-laning with paved shoulder', NULL, NULL, NULL, 'REPORTED', 'S112');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0058' AND package_no='EPC'), 'Unknown', NULL, 'unknown', NULL, NULL, 'REPORTED', 'S112') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-PATEL', 'Sole contractor', NULL::numeric, 'Patel Engineering Ltd', 'REPORTED'::itis.confidence_level, 'S112')) AS v;
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0058', NULL, 'unknown', 'milestone', NULL, 'Listed among Patel Engineering infrastructure works; status not stated', 'REPORTED', 'S112');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0058', 'schematic', ST_GeomFromText('LINESTRING(82.97 25.32, 82.95 24.08)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0059 Bhimasar–Anjar–Bhuj (NH-341)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0059', 'Bhimasar–Anjar–Bhuj (NH-341)', 'National Highway', 'HAM four-laning', 'CR-BHIMASAR-ANJAR-BHUJ-NH-341', NULL, NULL, 'Bhimasar', 'Bhuj airport junction', NULL, '', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0059', 'Bhimasar–Anjar–Bhuj (NH-341)', 'bhimasar anjar bhuj nh 341');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0059', 'IN-GJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0059', 'HAM', 'Four-laning with paved shoulder', NULL, NULL, NULL, 'REPORTED', 'S104');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0059' AND package_no='HAM'), 'HAM', '2022-03-30', 'day', 1085, NULL, 'REPORTED', 'S104') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GRIL', 'Concessionaire', NULL::numeric, 'G R Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S104')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0059', 1085, 'reported_cost', 'Bid project cost', '2022-03-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S104');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0059', '2022-03-30', 'day', 'award', 'LOA_ISSUED', 'Letter of award from NHAI', 'REPORTED', 'S104');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0059', 'schematic', ST_GeomFromText('LINESTRING(70.03 23.11, 69.67 23.25)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+
+-- ITI-P-0060 Agra–Gwalior Greenfield Expressway
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0060', 'Agra–Gwalior Greenfield Expressway', 'Expressway', 'Greenfield access-controlled expressway', 'CR-AGRA-GWALIOR-GREENFIELD-EXPRESSWAY', NULL, NULL, 'Deori (Agra)', 'Susera (Gwalior)', 88, '88 km (S106)', NULL, NULL, NULL, NULL, NULL, 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0060', 'Agra–Gwalior Greenfield Expressway', 'agra gwalior greenfield expressway');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0060', 'IN-UP', true),
+  ('ITI-P-0060', 'IN-MP', false),
+  ('ITI-P-0060', 'IN-RJ', false);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0060', 'Main', '88 km six-lane greenfield expressway', 88, NULL, NULL, 'REPORTED', 'S106');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0060' AND package_no='Main'), 'Unknown', '2025-04-01', 'month', NULL, NULL, 'REPORTED', 'S106') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GRIL', 'Sole contractor', NULL::numeric, 'G R Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S106')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0060', 4613, 'reported_cost', 'Total capital cost', '2025-04-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S106');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0060', '2025-04-01', 'month', 'award', 'AWARDED', 'Awarded to G R Infraprojects', 'REPORTED', 'S106');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0060', 'schematic', ST_GeomFromText('LINESTRING(78.01 27.18, 78.1 26.75, 78.18 26.22)', 4326), 'APPROXIMATE', 'Town-to-town schematic', false);
+INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
+  ('ITI-P-0060', 'RECENTLY_AWARDED', 'Other', '2025-04-01', '88 km greenfield expressway awarded Apr-2025 — construction-phase procurement', 'S106', '2026-09-28');
+
+-- ITI-P-0061 NH-56 four-laning, Gujarat (Package VI)
+INSERT INTO projects (project_id, canonical_name, project_type, category, corridor_id, highway_no, programme, origin, destination, length_km, length_basis, lanes, terrain, strategic_importance, nodal_ministry_id, implementing_authority_id, record_confidence, last_verified) VALUES
+  ('ITI-P-0061', 'NH-56 four-laning, Gujarat (Package VI)', 'National Highway', 'HAM four-laning', 'CR-NH-56-FOUR-LANING-GUJARAT-PACKAGE-VI', 'NH-56', NULL, NULL, NULL, 60.21, '60.21 km (S105)', NULL, NULL, NULL, NULL, 'A-NHAI', 'REPORTED', '2026-09-28');
+INSERT INTO project_aliases (project_id, alias, alias_norm) VALUES
+  ('ITI-P-0061', 'NH-56 four-laning, Gujarat (Package VI)', 'nh 56 four laning gujarat package vi');
+INSERT INTO project_states (project_id, state_code, is_primary) VALUES
+  ('ITI-P-0061', 'IN-GJ', true);
+INSERT INTO packages (project_id, package_no, name, length_km, progress_pct, progress_asof, record_confidence, source_id) VALUES ('ITI-P-0061', 'Pkg VI', 'Two-lane to four-lane divided highway', 60.21, NULL, NULL, 'REPORTED', 'S105');
+WITH c AS (INSERT INTO contracts (package_id, contract_type, award_date, award_date_precision, award_value_cr, contract_status, record_confidence, source_id) VALUES ((SELECT package_id FROM packages WHERE project_id='ITI-P-0061' AND package_no='Pkg VI'), 'HAM', '2026-03-01', 'month', 1453.57, NULL, 'REPORTED', 'S105') RETURNING contract_id)
+INSERT INTO contract_parties (contract_id, company_id, role, share_pct, original_name_in_source, record_confidence, source_id) SELECT contract_id, v.* FROM c, (VALUES ('C-GRIL', 'Concessionaire', NULL::numeric, 'G R Infraprojects Ltd', 'REPORTED'::itis.confidence_level, 'S105')) AS v;
+INSERT INTO project_values (project_id, value_cr, value_type, value_type_detail, as_of_date, as_of_precision, is_reference, reference_reason, discrepancy_note, record_confidence, source_id) VALUES
+  ('ITI-P-0061', 1453.57, 'award', 'Contract value', '2026-03-01', 'month', true, 'Most specific whole-project cost reported', NULL, 'REPORTED', 'S105');
+INSERT INTO project_events (project_id, event_date, date_precision, event_type, status_code, description, record_confidence, source_id) VALUES
+  ('ITI-P-0061', '2026-03-31', 'day', 'award', 'LOA_ISSUED', 'LoA from NHAI', 'REPORTED', 'S105');
+INSERT INTO project_locations (project_id, role, geom, precision, basis, is_planned) VALUES ('ITI-P-0061', 'centroid', ST_GeomFromText('POINT(72.6 22.3)', 4326), 'APPROXIMATE', 'Gujarat state centroid — package location not captured', false);
+INSERT INTO opportunity_signals (project_id, category, signal_type, signal_date, description, source_id, last_verified) VALUES
+  ('ITI-P-0061', 'RECENTLY_AWARDED', 'Other', '2026-03-31', 'LoA Mar-2026 — pre-construction / mobilisation', 'S105', '2026-09-28');
 COMMIT;

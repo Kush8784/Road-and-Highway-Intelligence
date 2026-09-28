@@ -2,7 +2,7 @@
 
 An evidence-first intelligence platform for India's roads, highways, expressways, bridges and tunnels: **who owns it, who awarded it, who is building it (package by package, JV member by JV member), what it costs by each source, where it is, what state it is in — and where every one of those facts came from.**
 
-> **Status:** specification + working prototype over a **sample dataset of 16 real projects and 48 cited sources** (researched 2026-09-28). The sample is not a complete database. Unknowns are shown as unknown.
+> **Status:** specification + working prototype over a **sample dataset of 61 real projects, 128 cited sources and 35 companies** (researched 2026-09-28): 16 corridor projects, plus the lifetime India road, bridge and tunnel portfolios of every contractor involved. The sample is not a complete database. Unknowns are shown as unknown.
 
 ## Run the prototype
 

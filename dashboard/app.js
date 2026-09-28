@@ -33,7 +33,8 @@
     { id: "delayed", label: "Delayed", color: "--st-delayed", glyph: "✕", dash: "8 3 2 3", codes: ["DELAYED"] },
     { id: "stalled", label: "Stalled / Disputed", color: "--st-stalled", glyph: "‖", dash: "2 3", codes: ["STALLED", "DISPUTED"] },
     { id: "complete", label: "Completed / Operational", color: "--st-complete", glyph: "●", dash: "", codes: ["SUBSTANTIALLY_COMPLETED", "COMPLETED", "OPERATIONAL", "OPEN_TO_TRAFFIC"] },
-    { id: "cancelled", label: "Cancelled / Terminated", color: "--st-cancelled", glyph: "⊘", dash: "1 4", codes: ["CANCELLED", "TERMINATED", "UNKNOWN"] },
+    { id: "cancelled", label: "Cancelled / Terminated", color: "--st-cancelled", glyph: "⊘", dash: "1 4", codes: ["CANCELLED", "TERMINATED"] },
+    { id: "unknown", label: "Status unverified", color: "--text-3", glyph: "?", dash: "1 6", codes: ["UNKNOWN"] },
   ];
   const groupOf = (code) => GROUPS.find((g) => g.codes.includes(code)) || GROUPS[GROUPS.length - 1];
 
@@ -86,7 +87,7 @@
     const members = [];
     p.packages.forEach((k) => k.contractor && k.contractor.members.forEach((m) => members.push({ ...m, pkg: k })));
     const companies = uniq(members.map((m) => m.company));
-    const srcIds = uniq([p.status_source, ...p.values.map((v) => v.source), ...p.events.map((e) => e.source), ...p.risks.map((r) => r.source), ...p.packages.map((k) => k.source), p.opportunity && p.opportunity.source]);
+    const srcIds = uniq([p.status_source, p.authority_source, ...(p.prior_contractors || []).map((x) => x.source), ...p.values.map((v) => v.source), ...p.events.map((e) => e.source), ...p.risks.map((r) => r.source), ...p.packages.map((k) => k.source), p.opportunity && p.opportunity.source]);
     const pubDates = srcIds.map((id) => src[id] && src[id].pub_date).filter(Boolean).sort();
     return Object.assign({}, p, {
       group: groupOf(p.status), stage: (STAGES.find((s) => s.codes.includes(p.status)) || {}).id || null,
@@ -400,31 +401,92 @@
     const rows = list.slice().sort((a, b) => { const x = val(a, projSort.k), y = val(b, projSort.k); return (x == null ? 1 : y == null ? -1 : x > y ? 1 : x < y ? -1 : 0) * projSort.dir; });
     $("#proj-count").textContent = `${rows.length} of ${P.length} sample projects · click column to sort`;
     $("#projects-table").innerHTML = `<div class="tbl-wrap"><table><thead><tr>${cols.map(([k, t], i) => `<th class="sortable ${[6, 7, 9].includes(i) ? "n" : ""}" data-k="${k}">${t}${projSort.k === k ? (projSort.dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead><tbody>` +
-      rows.map((p) => `<tr class="click" data-project="${p.id}"><td><b>${esc(p.name)}</b><br><span class="muted mono">${p.id}</span></td><td>${esc(p.type)}</td><td>${stPill(p.status)}</td><td>${esc(p.states.join(", "))}</td><td>${esc(p.authority ? p.authority.short : "—")}</td><td>${esc(p.companies.map(coName).join(", ") || "—")}</td><td class="n">${p.refValue != null ? fmt(p.refValue) : p.conflict ? '<span class="tag warn">conflict</span>' : "—"}</td><td class="n">${fmt(p.length_km, 1)}</td><td>${cf(p.confidence)}</td><td class="n">${p.dq.score}</td><td class="mono">${esc(p.last_verified)}</td></tr>`).join("") + `</tbody></table></div>`;
+      rows.map((p) => `<tr class="click" data-project="${p.id}"><td><b>${esc(p.name)}</b><br><span class="muted mono">${p.id}</span>${p.ingest ? ' <span class="tag">portfolio</span>' : ""}</td><td>${esc(p.type)}</td><td>${stPill(p.status)}</td><td>${esc(p.states.join(", "))}</td><td>${esc(p.authority ? p.authority.short : "—")}</td><td>${esc(p.companies.map(coName).join(", ") || "—")}</td><td class="n">${p.refValue != null ? fmt(p.refValue) : p.conflict ? '<span class="tag warn">conflict</span>' : "—"}</td><td class="n">${fmt(p.length_km, 1)}</td><td>${cf(p.confidence)}</td><td class="n">${p.dq.score}</td><td class="mono">${esc(p.last_verified)}</td></tr>`).join("") + `</tbody></table></div>`;
     $$("#projects-table th.sortable").forEach((th) => th.addEventListener("click", () => { projSort = { k: th.dataset.k, dir: projSort.k === th.dataset.k ? -projSort.dir : -1 }; renderProjects(filtered()); }));
   }
 
   // ---- F CONTRACTORS
+  const yearOf = (d) => (d && /^\d{4}/.test(String(d)) ? String(d).slice(0, 4) : null);
+  const isConcession = (role) => /concessionaire/i.test(role || "");
   function contractorStats(list) {
     const M = {};
     list.forEach((p) => p.members.forEach((m) => {
-      const c = (M[m.company] = M[m.company] || { id: m.company, projects: new Set(), pkgs: 0, value: 0, wvalue: 0, km: 0, active: 0, done: 0, bridges: new Set(), tunnels: new Set(), states: new Set(), auths: new Set(), jv: new Set() });
+      const c = (M[m.company] = M[m.company] || { id: m.company, projects: new Set(), pkgs: 0, value: 0, wvalue: 0, km: 0, active: 0, done: 0, conc: 0, years: [], bridges: new Set(), tunnels: new Set(), states: new Set(), auths: new Set(), jv: new Set() });
       c.projects.add(p.id); c.pkgs++; c.value += m.pkg.value_cr || 0; if (m.share != null) c.wvalue += ((m.pkg.value_cr || 0) * m.share) / 100;
       c.km += m.pkg.length_km || 0; if (["UNDER_CONSTRUCTION", "MOBILIZATION"].includes(m.pkg.status)) c.active++; if (m.pkg.status === "COMPLETED") c.done++;
+      if (isConcession(m.role)) c.conc++;
+      const y = yearOf(m.pkg.award_date); if (y) c.years.push(y);
       if (p.type === "Bridge") c.bridges.add(p.id); if (p.type === "Tunnel") c.tunnels.add(p.id);
       p.states.forEach((s) => c.states.add(s)); if (p.authority) c.auths.add(p.authority.short);
       if (m.pkg.contractor.kind === "JV") m.pkg.contractor.members.forEach((o) => o.company !== m.company && c.jv.add(o.company));
     }));
     return Object.values(M);
   }
+  let portfolioCo = null, portfolioGroup = true;
   function renderContractors(list) {
     const key = $("#c-sort").value;
     const rows = contractorStats(list).sort((a, b) => (key === "projects" ? b.projects.size - a.projects.size : key === "km" ? b.km - a.km : key === "active" ? b.active - a.active : b.value - a.value));
     const metric = { value: ["Attributed award value", (c) => c.value, cr], projects: ["Projects", (c) => c.projects.size, (v) => v], km: ["Package km", (c) => c.km, (v) => fmt(v, 1) + " km"], active: ["Active packages", (c) => c.active, (v) => v] }[key];
-    $("#contractors").innerHTML = `<p class="muted">Sorted by: <b>${metric[0]}</b>. JV package values are counted in full for each member (share-weighted value shown where JV share is disclosed). Metrics reflect only packages ingested in this sample.</p>` +
-      `<div class="grid2"><div>${bars(rows.map((c) => [coName(c.id), metric[1](c)]), metric[2])}</div><div></div></div>` +
-      table(["Company", "Projects", "Pkgs", "Attributed ₹cr", "Share-wtd ₹cr", "km", "Active", "Done", "Bridges", "Tunnels", "States", "Authorities", "JV partners"],
-        rows.map((c) => [coLink(c.id), c.projects.size, c.pkgs, fmt(c.value), c.wvalue ? fmt(c.wvalue) : "—", fmt(c.km, 1), c.active, c.done, c.bridges.size, c.tunnels.size, esc([...c.states].join(", ")), esc([...c.auths].join(", ")), [...c.jv].map(coLink).join(", ") || "—"]), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    if (!portfolioCo || !co[portfolioCo]) portfolioCo = F.company || (rows[0] && rows[0].id) || null;
+    const top = rows.slice(0, 15);
+    $("#contractors").innerHTML = `<p class="muted">Sorted by: <b>${metric[0]}</b>. JV package values are counted in full for each member (share-weighted value shown where JV share is disclosed). Counts cover only packages ingested — see each company's lifetime portfolio below. Click a company to open it.</p>` +
+      `<div class="grid2"><div><h3>Top ${top.length} by ${esc(metric[0].toLowerCase())}</h3>${bars(top.map((c) => [coName(c.id), metric[1](c)]), metric[2])}</div><div id="portfolio-pick"></div></div>` +
+      table(["Company", "Projects", "Pkgs", "Attributed ₹cr", "Share-wtd ₹cr", "km", "Active", "Done", "Concessions", "First–latest award", "Bridges", "Tunnels", "States", "Authorities", "JV partners"],
+        rows.map((c) => { const ys = c.years.sort(); return [coLink(c.id), c.projects.size, c.pkgs, fmt(c.value), c.wvalue ? fmt(c.wvalue) : "—", fmt(c.km, 1), c.active, c.done, c.conc, ys.length ? `${ys[0]}–${ys[ys.length - 1]}` : "—", c.bridges.size, c.tunnels.size, esc([...c.states].join(", ")), esc([...c.auths].join(", ")), [...c.jv].map(coLink).join(", ") || "—"]; }), [1, 2, 3, 4, 5, 6, 7, 8, 10, 11]) +
+      `<div class="panel" id="portfolio" style="margin-top:12px"></div>`;
+    $("#portfolio-pick").innerHTML = `<h3>Company lifetime portfolio</h3><label class="inline">Company <select id="pf-co">${D.companies.slice().sort((a, b) => a.name.localeCompare(b.name)).map((c) => `<option value="${c.id}" ${c.id === portfolioCo ? "selected" : ""}>${esc(c.name)}</option>`).join("")}</select></label>
+      <label class="inline" style="margin-top:6px"><input type="checkbox" id="pf-group" ${portfolioGroup ? "checked" : ""}> include subsidiaries / group entities</label>
+      <p class="muted" style="font-size:11.5px">Every India road, bridge, tunnel and expressway project found for the company, with its role, partners and evidence. Ignores the filter bar so the full record is always shown.</p>`;
+    $("#pf-co").addEventListener("change", (e) => { portfolioCo = e.target.value; renderPortfolio(); });
+    $("#pf-group").addEventListener("change", (e) => { portfolioGroup = e.target.checked; renderPortfolio(); });
+    renderPortfolio();
+  }
+  function renderPortfolio() {
+    const box = $("#portfolio"); if (!box || !portfolioCo) return;
+    const c = co[portfolioCo];
+    const group = [c.id].concat(portfolioGroup ? D.companies.filter((x) => x.parent && x.parent.includes("(" + c.id + ")")).map((x) => x.id) : []);
+    const parent = c.parent && (c.parent.match(/\((C-[A-Z0-9]+)\)/) || [])[1];
+    const rows = P.flatMap((p) => p.members.filter((m) => group.includes(m.company)).map((m) => ({ p, m })));
+    const prior = P.filter((p) => (p.prior_contractors || []).some((x) => group.includes(x.company)));
+    rows.sort((a, b) => (yearOf(b.m.pkg.award_date) || yearOf(b.p.status_asof) || "0").localeCompare(yearOf(a.m.pkg.award_date) || yearOf(a.p.status_asof) || "0"));
+    const projs = uniq(rows.map((r) => r.p.id));
+    const byYear = {}; rows.forEach((r) => { const y = yearOf(r.m.pkg.award_date); if (y) byYear[y] = (byYear[y] || 0) + 1; });
+    const byType = {}; projs.forEach((id) => { const t = PI[id].type; byType[t] = (byType[t] || 0) + 1; });
+    const partners = uniq(rows.flatMap((r) => r.m.pkg.contractor.kind === "JV" ? r.m.pkg.contractor.members.map((x) => x.company) : []).filter((x) => !group.includes(x)));
+    const roles = {}; rows.forEach((r) => { const k = /^L1 bidder/.test(r.m.role) ? "L1 bidder (award not captured)" : isConcession(r.m.role) ? "Concessionaire" : /sub/i.test(r.m.role) ? "Subcontractor" : "EPC / construction"; roles[k] = (roles[k] || 0) + 1; });
+    const yrs = Object.keys(byYear).sort();
+    const tiles = [["Projects", projs.length], ["Packages / contracts", rows.length], ["Attributed ₹cr", fmt(rows.reduce((s, r) => s + (r.m.pkg.value_cr || 0), 0))], ["Package km", fmt(rows.reduce((s, r) => s + (r.m.pkg.length_km || 0), 0), 1)],
+      ["Award years", yrs.length ? yrs[0] + "–" + yrs[yrs.length - 1] : "—"], ["States", uniq(rows.flatMap((r) => r.p.states)).length], ["Authorities", uniq(rows.map((r) => r.p.authority && r.p.authority.short)).length], ["JV partners", partners.length]];
+    box.innerHTML = `<div class="panel-head"><h2>${esc(c.name)} — lifetime India transport portfolio</h2><span class="hint">${esc(c.aliases.join(" · "))}</span>
+        <div class="map-tools"><button class="btn ghost" id="pf-graph">Open in graph</button><button class="btn ghost" id="pf-filter">Filter all views</button><button class="btn ghost" id="pf-csv">Export CSV</button></div></div>
+      <dl class="kv"><dt>Listed</dt><dd>${c.listed == null ? "Not captured" : c.listed ? "Yes" : "No"} · ${esc(c.country || "—")}${c.hq ? " · HQ " + esc(c.hq) : ""}</dd>
+        <dt>Group</dt><dd>${parent ? "Subsidiary of " + coLink(parent) : esc(c.parent || "—")}${group.length > 1 ? " · includes " + group.slice(1).map(coLink).join(", ") : ""}</dd>
+        ${c.website ? `<dt>Website</dt><dd><a href="${esc(c.website)}" target="_blank" rel="noopener">${esc(c.website)}</a></dd>` : ""}
+        <dt>Published footprint</dt><dd>${c.profile ? esc(c.profile.text) + " " + srcLink(c.profile.source) + ' <span class="muted">(company/secondary statement — not computed from ITIS rows)</span>' : '<span class="muted">No published lifetime statement captured</span>'}</dd>
+        <dt>Roles</dt><dd>${Object.entries(roles).map(([k, v]) => esc(k) + " " + v).join(" · ") || "—"}</dd>
+        <dt>Project types</dt><dd>${Object.entries(byType).map(([k, v]) => esc(k) + " " + v).join(" · ") || "—"}</dd>
+        <dt>JV / consortium partners</dt><dd>${partners.map(coLink).join(", ") || "—"}</dd>
+        ${prior.length ? `<dt>Exited / replaced on</dt><dd>${prior.map(projLink).join(", ")}</dd>` : ""}</dl>
+      <div class="q-grid" style="margin-top:10px">${tiles.map(([k, v]) => `<div class="q-cell"><span class="k-label">${esc(k)}</span><span class="k-val">${v}</span></div>`).join("")}</div>
+      ${yrs.length ? `<h3>Packages awarded by year (where award year is sourced)</h3>${yearColumns(byYear)}` : ""}
+      <h3>All projects (${projs.length}) — newest first</h3>` +
+      table(["Year", "Project", "Package", "Role", "Partners", "Authority", "State(s)", "₹cr", "Pkg status", "Project status", "Evidence"],
+        rows.map(({ p, m }) => [yearOf(m.pkg.award_date) ? esc(yearOf(m.pkg.award_date)) : yearOf(p.status_asof) ? `<span class="muted" title="No award year sourced; ordered by status date">as of ${esc(yearOf(p.status_asof))}</span>` : "—", projLink(p) + (p.ingest ? ' <span class="tag">portfolio</span>' : ""), esc(m.pkg.no), esc(m.role) + (m.share != null && m.pkg.contractor.kind === "JV" ? ` ${m.share}%` : ""),
+          m.pkg.contractor.kind === "JV" ? m.pkg.contractor.members.filter((x) => x.company !== m.company).map((x) => coLink(x.company)).join(", ") : "—",
+          esc(p.authority ? p.authority.short : "—"), esc(p.states.join(", ")), m.pkg.value_cr != null ? fmt(m.pkg.value_cr, 2) : "—", stPill(m.pkg.status), stPill(p.status), srcLink(m.pkg.source) + " " + cf(m.pkg.confidence)]), [7]) +
+      `<p class="footnote">"Lifetime" = every project found by the contractor research pass (2026-09-28) plus the corridor sample. It is not the company's complete order history; published footprint statements above are the company's own totals.</p>`;
+    $("#pf-graph").addEventListener("click", () => { graphSel = c.id; showView("graph"); });
+    $("#pf-filter").addEventListener("click", () => setFilter("company", c.id));
+    $("#pf-csv").addEventListener("click", () => {
+      const q = (v) => `"${String(v == null ? "" : v).replace(/"/g, '""')}"`;
+      const lines = rows.map(({ p, m }) => [yearOf(m.pkg.award_date), p.id, p.name, m.pkg.no, coName(m.company), m.role, m.share, p.authority ? p.authority.short : "", p.states.join("; "), m.pkg.value_cr, m.pkg.length_km, S[m.pkg.status] ? S[m.pkg.status].label : m.pkg.status, S[p.status].label, m.pkg.confidence, src[m.pkg.source] ? src[m.pkg.source].url : m.pkg.source].map(q).join(","));
+      download(`itis-portfolio-${c.id}-${AS_OF}.csv`, "\ufeffyear,project_id,project,package,company,role,share_pct,authority,states,value_cr,length_km,package_status,project_status,confidence,source_url\n" + lines.join("\n"), "text/csv");
+    });
+  }
+  function yearColumns(byYear) {
+    const ys = Object.keys(byYear).sort(); const y0 = +ys[0], y1 = +ys[ys.length - 1]; const max = Math.max(...Object.values(byYear));
+    const cols = []; for (let y = y0; y <= y1; y++) cols.push([String(y), byYear[y] || 0]);
+    return `<div class="ycols">${cols.map(([y, n]) => `<div class="ycol" title="${y}: ${n} package(s)"><span class="yv">${n || ""}</span><span class="yb" style="height:${(n / max) * 64}px"></span><span class="yl">${cols.length > 14 ? y.slice(2) : y}</span></div>`).join("")}</div>`;
   }
 
   // ---- G AUTHORITIES
@@ -493,7 +555,7 @@
       p.packages.forEach((k) => { if (k.contractor && k.contractor.kind === "JV") { const ms = k.contractor.members; for (let i = 0; i < ms.length; i++) for (let j = i + 1; j < ms.length; j++) edges.push({ a: ms[i].company, b: ms[j].company, kind: "jv" }); } });
     });
     // deterministic force layout
-    const W = 1000, H = 640;
+    const W = 1200, H = 760;
     nodes.forEach((n, i) => { const a = (i / nodes.length) * Math.PI * 2; const r = n.kind === "authority" ? 120 : n.kind === "project" ? 220 : 300; n.x = W / 2 + r * Math.cos(a); n.y = H / 2 + r * Math.sin(a); });
     for (let it = 0; it < 700; it++) {
       for (let i = 0; i < nodes.length; i++) for (let j = i + 1; j < nodes.length; j++) {
@@ -501,7 +563,7 @@
         a.vx += (dx / d) * f; a.vy += (dy / d) * f; b.vx -= (dx / d) * f; b.vy -= (dy / d) * f;
       }
       edges.forEach((e) => { const a = idx[e.a], b = idx[e.b]; const dx = b.x - a.x, dy = b.y - a.y; const d = Math.sqrt(dx * dx + dy * dy) || 1; const f = (d - 85) * 0.02; a.vx += (dx / d) * f; a.vy += (dy / d) * f; b.vx -= (dx / d) * f; b.vy -= (dy / d) * f; });
-      nodes.forEach((n) => { n.vx += (W / 2 - n.x) * 0.004; n.vy += (H / 2 - n.y) * 0.004; n.x += Math.max(-20, Math.min(20, n.vx)); n.y += Math.max(-20, Math.min(20, n.vy)); n.vx *= 0.5; n.vy *= 0.5; n.x = Math.max(20, Math.min(W - 170, n.x)); n.y = Math.max(20, Math.min(H - 20, n.y)); });
+      nodes.forEach((n) => { n.vx += (W / 2 - n.x) * 0.004; n.vy += (H / 2 - n.y) * 0.004; n.x += Math.max(-20, Math.min(20, n.vx)); n.y += Math.max(-20, Math.min(20, n.vy)); n.vx *= 0.5; n.vy *= 0.5; n.x = Math.max(20, Math.min(W - 170, n.x)); n.y = Math.max(16, Math.min(H - 16, n.y)); });
     }
     return { nodes, edges, idx, W, H };
   }
@@ -748,7 +810,7 @@
     // delegated links anywhere in the app
     document.addEventListener("click", (e) => {
       const pj = e.target.closest("[data-project]"); if (pj && !e.target.closest("#map")) { openProject(pj.dataset.project); return; }
-      const c = e.target.closest("[data-company]"); if (c) { $("#drawer").hidden = true; graphSel = c.dataset.company; showView("graph"); }
+      const c = e.target.closest("[data-company]"); if (c) { $("#drawer").hidden = true; portfolioCo = c.dataset.company; showView("contractors"); const el = $("#portfolio"); if (el) el.scrollIntoView({ block: "start" }); }
     });
     let v = "map"; try { v = localStorage.getItem("itis-view") || "map"; } catch (e) { /* ignore */ }
     showView($("#view-" + v) ? v : "map");
